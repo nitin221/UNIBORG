@@ -18,11 +18,10 @@ async def _(event):
     if input_str == "avatar":
         await event.edit(input_str)
         animation_chars = [
-            "your",
-            "boss",
+            "your boss",
+            "AVATAR😎",
             "Is",
-            "Here",
-           "AVATAR😎",]
+            "Here",]
         for i in animation_ttl:
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 4])
