@@ -22,8 +22,7 @@ async def _(event):
             "boss",
             "Is",
             "Here",
-            "AVATAR😎"
-        ]
+           "AVATAR😎",]
         for i in animation_ttl:
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 4])
