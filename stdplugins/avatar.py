@@ -20,7 +20,8 @@ async def _(event):
         animation_chars = [
             "your",
             "boss",
-            "here?",
+            "Is",
+            "Here",
             "AVATAR😎"
         ]
         for i in animation_ttl:
