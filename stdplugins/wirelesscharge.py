@@ -29,7 +29,7 @@ import importlib.util
 
 async def timer_blankx(e):
 
- txt=e.text[7:] + '\n\n`Tesla Wireless Charging (beta) Started...\nDevice Detected: Nokia 1100\nBattery Percentage:` '
+ txt=e.text[7:] + '\n\n`Avatar Wireless Charging (beta) Started...\nDevice Detected: Nokia 1100\nBattery Percentage:` '
 
  j=10
 
