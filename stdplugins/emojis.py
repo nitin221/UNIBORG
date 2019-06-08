@@ -9,14 +9,14 @@ import asyncio
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd("emoji (.*)"))
+@borg.on(admin_cmd("e (.*)"))
 async def _(event):
     if event.fwd_from:
         return
     animation_interval = 0.3
     animation_ttl = range(0, 16)
     input_str = event.pattern_match.group(1)
-    if input_str == "shrug":
+    if input_str == "s":
         await event.edit("¯\_(ツ)_/¯")
     elif input_str == "apple":
         await event.edit("\uF8FF")
