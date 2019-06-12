@@ -1,11 +1,11 @@
-"""@traph Utilities
+"""@telegraph Utilities
 Available Commands:
-.tgraph media as reply to a media
-.tgraph text as reply to a large text"""
+.teleegraph media as reply to a media
+.telegraph text as reply to a large text"""
 from telethon import events
 import os
 from datetime import datetime
-from tgraph import Tgraph, upload_file, exceptions
+from telegraph import Telegraph, upload_file, exceptions
 from uniborg.util import admin_cmd
 
 telegraph = Telegraph()
