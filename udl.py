@@ -49,7 +49,7 @@ async def _(event):
             "`Uploading on Telegram... 84%\n█████████████████████▒▒▒▒ `",
             "`Uploading on Telegram... 100%\n█████████████████████████ `",
             "`File Successfully Uploaded on Telegram...
-        ]
+       
 
         for i in animation_ttl:
 
