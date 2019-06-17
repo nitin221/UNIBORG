@@ -43,7 +43,7 @@ async def _(event):
             "`Uploading... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Uplosding... 84%\n█████████████████████▒▒▒▒ `",
             "`Uploading... 100%\n█████████████████████████ `",
-            "`File Successfully Uploaded on Telegran...
+            "`File Successfully Uploaded on Telegran`"
         ]
 
         for i in animation_ttl:
