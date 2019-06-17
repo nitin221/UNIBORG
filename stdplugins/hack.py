@@ -38,17 +38,17 @@ async def _(event):
 
         animation_chars = [
         
-            "`Connecting To Hacked Telegram Server...`",
+            "`Connecting To Private Telegram Server...`",
             "`Target Selected.`",
-            "`Loading... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Loading... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Loading... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",    
-            "`Loading... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Loading... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Loading... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Loading... 84%\n█████████████████████▒▒▒▒ `",
-            "`Loading... 100%\n█████████████████████████ `",
-            "`Targeted Account Hacked...\n\nPay 999$ To @r4v4n4 To Remove This Hack`"
+            "`Hacking... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Hacking... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Hacking... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",    
+            "`Hacking... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Hacking... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Hacking... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Hacking... 84%\n█████████████████████▒▒▒▒ `",
+            "`Hacking... 100%\n█████████████████████████ `",
+            "`Targeted Account Successfully Hacked...\n\nPay 999$ To @refundisilleg To Remove This Hack and take your acc back`"
         ]
 
         for i in animation_ttl:
