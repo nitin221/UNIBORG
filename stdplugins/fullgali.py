@@ -9,7 +9,7 @@ from uniborg.util import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
-mentions = "`Main roz teri
+mentions = "`Main roz teri\n
 behno ki banjar chut me
 apna lawda daalke andar
 haryali lata tha magar aaj
