@@ -9,7 +9,7 @@ from uniborg.util import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
-mentions = "`Main roz teri\n
+mentions = Main roz teri
 behno ki banjar chut me
 apna lawda daalke andar
 haryali lata tha magar aaj
@@ -50,7 +50,7 @@ chudi hui kuttiyo ki tarah
 apni gaand hilaate hue
 mere aage kalapna mt ni
 to tumhari fatti bhoxdi me
-100 ched karunga!`"
+100 ched karunga!
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
