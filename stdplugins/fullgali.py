@@ -15,7 +15,7 @@ apna lawda daalke andar
 haryali lata tha magar aaj
 unke ke baare me
 sunke mujhe bhut afsos
-huwa ki unko ab bada loudha chahye..ab mera balatkaaari
+huwa ki unko ab bada loudha chahye ab mera balatkaaari
 lawda lagataar 4 ghante tk
 apne muh me kon
 rakhega vo teri
@@ -26,7 +26,7 @@ zameen pe naagin ki tarah
 rengne lgti thi jaise ki
 kisine unki chut pe naariyal
 tod diya ho vo b bada wala
-mumbai ka naariyal..apni
+mumbai ka naariyal apni
 chennal maa ko b nhi bhej
 rahe mere paas to main
 kaixe tum logo se vaada
@@ -45,7 +45,7 @@ mere saamne nahi rakhi to
 tumhare ghar me ghuske
 tumhari maa ka balatkaar
 kar dungaw jaixe delhi me
-huwa tha...ab teri
+huwa tha ab teri
 chudi hui kuttiyo ki tarah
 apni gaand hilaate hue
 mere aage kalapna mt ni
