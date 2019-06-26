@@ -23,7 +23,7 @@ GIT_TEMP_DIR = "./temp/"
 async def download(event):
 	if event.fwd_from:
 		return	
-	if Config.GITHUB_ACCESS_TOKEN is None:
+	await borg.send_file(
 		await event.edit("`Please ADD Proper Access Token from github.com`") 
 		return   
 	if Config.GIT_REPO_NAME is None:
