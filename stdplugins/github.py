@@ -23,7 +23,7 @@ async def _(event):
         location = b["location"]
         bio = b["bio"]
         created_at = b["created_at"]
-        await borg.send_file(
+        if Config.GITHUB_ACCESS_TOKEN is None:
             event.chat_id,
             caption="""Name: [{}]({})
 Type: {}
