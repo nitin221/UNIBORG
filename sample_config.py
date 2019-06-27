@@ -73,8 +73,8 @@ class Config(object):
     # feel free to use http://telegram.dog/Remove_BGBot
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
     # Set to True if you want to block users that are spamming your PMs.
-   GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
-     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
+    GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
+    GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
     NO_P_M_SPAM = bool(os.environ.get("NO_P_M_SPAM", False))
     # define "spam" in PMs
     MAX_FLOOD_IN_P_M_s = int(os.environ.get("MAX_FLOOD_IN_P_M_s", 3))
