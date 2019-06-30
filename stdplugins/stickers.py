@@ -47,7 +47,7 @@ async def _(event):
     me = borg.me
     userid = event.from_id
     packname = f"@loxxi Pack"
-    packshortname = f"loxxi_pack{userid}"  # format: Uni_Borg_userid
+    packshortname = f"loxxi_pack"  # format: Uni_Borg_userid
 
     await event.edit("Processing this sticker. Please Wait!")
 
@@ -75,7 +75,7 @@ async def _(event):
                         mime_type='image/png',
                         attributes=[
                             DocumentAttributeFilename(
-                                "@UniBorg_Sticker.png"
+                                "@loxxi_Sticker.png"
                             )
                         ]
                     ),
@@ -99,7 +99,7 @@ async def _(event):
                         mime_type='image/png',
                         attributes=[
                             DocumentAttributeFilename(
-                                "@UniBorg_Sticker.png"
+                                "@loxxi_Sticker.png"
                             )
                         ]
                     ),
