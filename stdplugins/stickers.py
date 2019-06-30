@@ -47,7 +47,7 @@ async def _(event):
     me = borg.me
     userid = event.from_id
     packname = f"@loxxi Pack"
-    packshortname = f"loxxi_pack"  # format: Uni_Borg_userid
+    packshortname = f"loxxi_packs"  # format: Uni_Borg_userid
 
     await event.edit("Processing this sticker. Please Wait!")
 
