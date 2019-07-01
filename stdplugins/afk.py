@@ -97,6 +97,6 @@ async def on_afk(event):
             if not reason:
                 msg = await event.reply(f"[AVATAR](t.me/refundisillegal) is afk since {afk_since} and He will be back soon.")
             else:
-                msg = await event.reply(f"I'm afk since {afk_since} and I will be back soon\n__Reason:__ {reason}")
+                msg = await event.reply(f"[AVATAR](t.me/refundisillegal) afk since {afk_since} and He will be back soon\n__Reason:__ {reason}")
             await asyncio.sleep(5)
             await msg.delete()
