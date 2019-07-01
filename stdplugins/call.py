@@ -1,9 +1,6 @@
-"""Emoji
+"""call
 Available Commands:
-.emoji shrug
-.emoji apple
-.emoji :/
-.emoji -_-"""
+.call"""
 
 from telethon import events
 
