@@ -76,7 +76,7 @@ async def _(event):
                         mime_type='image/png',
                         attributes=[
                             DocumentAttributeFilename(
-                                "@UniBorg_Sticker.png"
+                                "@avatar_Sticker.png"
                             )
                         ]
                     ),
@@ -111,7 +111,7 @@ async def _(event):
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
 
-    await event.edit(f"Myrdered this sticker! Your can see sticker soul[here](t.me/addstickers/{packshortname})")
+    await event.edit(f"Murdered this sticker! Your can see sticker soul [here](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd("packinfo"))
