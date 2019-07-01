@@ -13,8 +13,8 @@ async def _(event):
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
-    as_text = False
-    as_document = True
+    as_text = True
+    as_document = False
     if input_str == "image":
         as_document = False
     elif input_str == "file":
