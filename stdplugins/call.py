@@ -10,7 +10,7 @@ import asyncio
 
 
 
-@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.(.call*)", outgoing=True))
 
 async def _(event):
 
