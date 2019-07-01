@@ -98,4 +98,3 @@ async def imdb(e):
        )
  except IndexError:
      await e.edit("Plox enter Valid movie name kthx")
-© 2019 GitHub, Inc.
