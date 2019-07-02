@@ -99,7 +99,8 @@ class Config(object):
     # Google Drive ()
     G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", None)
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", None)
-
+    GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
+    GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
 
 class Production(Config):
     LOGGER = False
