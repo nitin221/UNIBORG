@@ -46,9 +46,8 @@ class Config(object):
     # DO NOT EDIT BELOW THIS LINE IF YOU DO NOT KNOW WHAT YOU ARE DOING
     # TG API limit. A message can have maximum 4096 characters!
     MAX_MESSAGE_SIZE_LIMIT = 4095
-    # set blackli
-    
-
+    # set blacklist_chats where you do not want userbot's features
+    UB_BLACK_LIST_CHAT = set(int(x) for x in os.environ.get("UB_BLACK_LIST_CHAT", "").split())
     # maximum number of messages for antiflood
     MAX_ANTI_FLOOD_MESSAGES = 10
     # warn mode for anti flood
@@ -69,11 +68,11 @@ class Config(object):
         "telegraph",
         "gban"
     ]
-
     # Get your own API key from https://www.remove.bg/ or
     # feel free to use http://telegram.dog/Remove_BGBot
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
     # Set to True if you want to block users that are spamming your PMs.
+    SLAP_USERNAME = os.environ.get("SLAP_USERNAME", None)
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
     NO_P_M_SPAM = bool(os.environ.get("NO_P_M_SPAM", False))
@@ -102,7 +101,8 @@ class Config(object):
     # Google Drive ()
     G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", None)
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", None)
-    
+    GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", None)
+
 
 class Production(Config):
     LOGGER = False
