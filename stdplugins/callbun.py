@@ -38,16 +38,24 @@ async def _(event):
 
         animation_chars = [
         
-            "`Connecting To Telegram Headquarters...`",
+              "`Connecting To Telegram Headquarters...`",
+            "`Call Connected.`",
+            "`Telegram: Hello This is Telegram HQ. Who is this?`",
+            "`Me: Yo this is` @loxxi ,`Please Connect me to Pavel Durov Shukla`",
             "`User Authorised.`",
-            "`Private VOIP Call Connected...`",
-            "`Me Calling Pavel Durov Shukla....`",
-            "`Me: Hello Sir, Please Ban This Guys Telegram Account.`",    
+            "`Calling Pavel Durov Shukla (@durov) At +2349058015029`",
+            "`Private  Call Connected...`",
+            "`Me: Hello Sir, Please Ban This Telegram Account.`",    
             "`Durov: May I Know Who Is This?`",
-            "`Me: Yo Brah, I Am` @refundisillegal",
+            "`Me: Yo Brah, I Am` cee jay",
             "`Durov: OMG!!! I Am FAN Of You Sir...\nI'll Make Sure That Guy Account Will Get Blocked Within 24Hrs.`",
-            "`Me: See You Later Brah.`",
-            "`Private VOIP Call Disconnected.`",
+            "`Me: Thanks, See You Later Brah.`",
+            "`Durov: Please Don't Thank Sir, Telegram Is Your's. Just Gimme A Call When You Become Free.`",
+            "`Me: Is There Any Issue/Emergency???`",
+            "`Durov: Yes Sir, There Is A Bug In Telegram v5.8.0.\nI Am Not Able To Fix It. If Possible, Please Help Fix The Bug.`",
+            "`Me: Send Me The App On My Telegram Account, I Will Fix The Bug & Send You.`",
+            "`Durov: Sure Sir \nTC Bye Bye :)`",
+            "`Private Call Disconnected.`"
         ]
 
         for i in animation_ttl:
