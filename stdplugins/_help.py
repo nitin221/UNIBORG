@@ -14,11 +14,12 @@ async def _(event):
         s_help_string = ""
     help_string = """@UniBorg(**Custom Built By** @loxxi)
     
-    Verified Account ✅
+Verified Account ✅
 Official Website: https://webloaded.com.ng
 
 Python {}
 Telethon {}
+
 UserBot Forked from https://github.com/Somto811/uniborg""".format(
         sys.version,
         __version__
