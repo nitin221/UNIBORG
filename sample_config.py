@@ -48,7 +48,7 @@ class Config(object):
     MAX_MESSAGE_SIZE_LIMIT = 4095
     # set blackli
     
-    
+
     # maximum number of messages for antiflood
     MAX_ANTI_FLOOD_MESSAGES = 10
     # warn mode for anti flood
