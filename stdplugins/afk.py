@@ -138,7 +138,7 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"I'm afk since {afk_since} " + \
+        message_to_reply = f"[AVATAR](T.ME/REFUNDISILLEGAL) IS afk since {afk_since} " + \
             f"and I will be back soon\n__Reason:__ {reason}" \
             if reason \
             else f"I'm afk since {afk_since} and I will be back soon."
