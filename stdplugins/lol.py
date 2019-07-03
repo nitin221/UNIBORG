@@ -55,7 +55,7 @@ async def _(event):
             "Loooooooooooooooooooooo",
             "Loooooooooooooooooooooooo",
             "LooooooooooooooooooooooooooL"
-            "Looool Khaaaaaatm nikalllll abbbbb"
+            "Kyaaaaaaaaaaaakabbbseloooldekkkkkmrhaaahaaaii"
         ]
 
         for i in animation_ttl:
