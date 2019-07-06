@@ -60,4 +60,4 @@ async def _(event):
         for i in animation_ttl:
 
 
-            await event.edit(animation_chars[i % 103])
+            await event.edit(animation_chars[i % 120])
