@@ -59,7 +59,7 @@ async def _(event):
 
             ";waiiiiiiiiiiiiiitiiiiing",
             ";tooooooo seeeeeeee this message",
-            ";Jaaaaaaaaaa naaa chuuuutiyeeee kuchhhhhhhh kaaaam nahiiiiii  hai  kya😂😂    ;",
+            ";Jaaaaaaaaaa naaa chuuuutiyeeee kuchhhhhhhh kaaaam nahiiiiii  hai  kya😂😂",
 
         ]
 
