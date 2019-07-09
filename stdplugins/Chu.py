@@ -48,16 +48,16 @@ async def _(event):
             ";Chutiyaaaa.............._",
             ";😂😂😂😂😂😂..............._",
             ";💨💨💨💨💦👓👣👅👀💣💢💤💥💬💍",
-            ";whooooo.................._"'
-            ";iiiiiiissssssss........._"'
-            ";w.........hooooo..._"'
+            ";whooooo.................._",
+            ";iiiiiiissssssss........._",
+            ";w.........hooooo..._",
             
             
             
 
             ";waiiiiiiiiiiiiiitiiiiing...._",
-            ";tooooooo_seeeeeeee_this_message.._"'
-            ";Jaaaaaaaaaa_naaa_chuuuutiyeeee_kuchhhhhhhh_kaaaam___nahiiiiii___hai___kya_😂😂___;"
+            ";tooooooo_seeeeeeee_this_message.._",
+            ";Jaaaaaaaaaa_naaa_chuuuutiyeeee_kuchhhhhhhh_kaaaam___nahiiiiii___hai___kya_😂😂___;",
         ]
 
         for i in animation_ttl:
