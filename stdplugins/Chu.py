@@ -34,29 +34,29 @@ async def _(event):
 
         animation_chars = [
 
-            ";T..",
-            ";Th..",
-            ";Thi...",
-            ";This....",
-            ";Is.....",
-            ";a...",
-            ";C....",
-            ";ch.....",
-            ";Chu.......",
-            ";Chut............",
-            ";Chuti..........",
-            ";Chutiyaaaa.............."'
-            ";😂😂😂😂😂😂..............."'
+            ";T.._",
+            ";Th.._",
+            ";Thi..._",
+            ";This...._",
+            ";Is....._",
+            ";a..._",
+            ";C...._",
+            ";ch....._",
+            ";Chu......._",
+            ";Chut............_",
+            ";Chuti.........._",
+            ";Chutiyaaaa.............._"'
+            ";😂😂😂😂😂😂..............._"'
 
-            ";whooooo.................."'
-            ";iiiiiiissssssss........."'
-            ";w.........hooooo..."'
+            ";whooooo.................._"'
+            ";iiiiiiissssssss........._"'
+            ";w.........hooooo..._"'
             
             
             
 
-            ";waiiiiiiiiiiiiiitiiiiing....",
-            ";tooooooo_seeeeeeee_this_message.."'
+            ";waiiiiiiiiiiiiiitiiiiing...._",
+            ";tooooooo_seeeeeeee_this_message.._"'
             ";Jaaaaaaaaaa_naaa_chuuuutiyeeee_kuchhhhhhhh_kaaaam___nahiiiiii___hai___kya_😂😂___;"
         ]
 
