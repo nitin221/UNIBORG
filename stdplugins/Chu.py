@@ -21,10 +21,10 @@ async def _(event):
 
         return
 
-    animation_interval = 1
+    animation_interval = 2
     
 
-    animation_ttl = range(0, 80)
+    animation_ttl = range(0, 10)
 
     input_str = event.pattern_match.group(1)
 
@@ -34,33 +34,36 @@ async def _(event):
 
         animation_chars = [
 
-            ";T.._",
-            ";Th.._",
-            ";Thi..._",
-            ";This...._",
-            ";Is....._",
-            ";a..._",
-            ";C...._",
-            ";ch....._",
-            ";Chu......._",
-            ";Chut............_",
-            ";Chuti.........._",
-            ";Chutiyaaaa.............._",
-            ";😂😂😂😂😂😂..............._",
+            ";T",
+            ";Th",
+            ";Thi",
+            ";This",
+            ";Is",
+            ";A",
+            ";C",
+            ";ch",
+            ";Chu",
+            ";Chut",
+            ";Chutia",
+            ";Chutiyaaaa",
+            ";😂😂😂😂😂😂",
             ";💨💨💨💨💦👓👣👅👀💣💢💤💥💬💍",
-            ";whooooo.................._",
-            ";iiiiiiissssssss........._",
-            ";w.........hooooo..._",
+            ";whooooo",
+            ";iiiiiiissssssss",
+            ";wwwwwww",
+            
+   
             
             
             
 
-            ";waiiiiiiiiiiiiiitiiiiing...._",
-            ";tooooooo_seeeeeeee_this_message.._",
-            ";Jaaaaaaaaaa_naaa_chuuuutiyeeee_kuchhhhhhhh_kaaaam___nahiiiiii___hai___kya_😂😂___;",
+            ";waiiiiiiiiiiiiiitiiiiing",
+            ";tooooooo seeeeeeee this message",
+            ";Jaaaaaaaaaa naaa chuuuutiyeeee kuchhhhhhhh kaaaam nahiiiiii  hai  kya😂😂    ;",
+
         ]
 
         for i in animation_ttl:
 
 
-            await event.edit(animation_chars[i % 80])
+            await event.edit(animation_chars[i % 10])
