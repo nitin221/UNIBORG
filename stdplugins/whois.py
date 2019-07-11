@@ -53,7 +53,7 @@ DC ID: {}
 Number of PPs: {}
 Restricted: {}
 Verified: {}
-Bot: {}
+Bot: {} /😶
 Groups in Common: {}
 """.format(
         user_id,
