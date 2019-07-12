@@ -200,7 +200,7 @@ All instaructions to run @UniBorg in your PC has been explained in https://githu
                     [custom.Button.url(
                         "Source Code", "https://github.com/SpEcHiDe/uniborg")]
                     [custom.Button.url(
-                        "CONTACT BOSS", "https://t.me/Refundisillegal")]
+                        "Contact Boss", "https://t.me/Refundisillegal")]
                 ],
                 link_preview=False
             )
