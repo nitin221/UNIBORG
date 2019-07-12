@@ -196,9 +196,11 @@ You can log-in as Bot or User and do many cool things with your Telegram account
 All instaructions to run @UniBorg in your PC has been explained in https://github.com/SpEcHiDe/UniBorg""",
                 buttons=[
                     [custom.Button.url("Join the Channel", "https://telegram.dog/UniBorg"), custom.Button.url(
-                        "Join the Group", "tg://some_unsupported_feature")],
+                        "Join the Group", "t.me/thanktelegram")],
                     [custom.Button.url(
-                        "Source Code", "tg://some_unsupported_feature")]
+                        "Source Code", "https://github.com/SpEcHiDe/uniborg")]
+                    [custom.Button.url(
+                        "CONTACT BOSS😎", "https://t.me/Refundisillegal")]
                 ],
                 link_preview=False
             )
@@ -217,7 +219,7 @@ All instaructions to run @UniBorg in your PC has been explained in https://githu
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Please get your own @UniBorg, and don't edit my messages!"
+            reply_pop_up_alert = "Please get your own @UniBorg, and don't edit my messages bsdk!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 
@@ -236,7 +238,7 @@ All instaructions to run @UniBorg in your PC has been explained in https://githu
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Please get your own @UniBorg, and don't edit my messages!"
+            reply_pop_up_alert = "Please get your own @UniBorg, and don't edit my messages bsdk!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 
