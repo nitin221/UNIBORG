@@ -1,5 +1,5 @@
 """Evaluate Python Code inside Telegram
-Syntax: .eval PythonCode"""
+Syntax: .evul PythonCode"""
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -10,7 +10,7 @@ import asyncio
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd("eval ?((.|\n)*)"))
+@borg.on(admin_cmd("evul ?((.|\n)*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -19,7 +19,7 @@ async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
-    evaluation = eval(cmd)
+    evaluation = evul(cmd)
     await event.delete()
     # https://t.me/telethonofftopic/43873
     # https://t.me/TheUseLessGroup/40472
