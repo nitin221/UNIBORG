@@ -153,7 +153,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-    """.admin Plugin for @UniBorg"""
+""".admin Plugin for @UniBorg"""
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -164,7 +164,7 @@ from uniborg.util import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "`You Have  2/3  warnings...\nWatch out!....\nReason for last warn: Totally 100℅ Bhadwa Admi`"
+    mentions = "`You Have  3/3  warnings...\nWatch out!....\nReason for last warn: Totally 100℅ Bhadwa Admi`"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
