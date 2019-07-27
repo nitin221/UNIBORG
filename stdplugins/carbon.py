@@ -63,7 +63,7 @@ async def carbon_api(e):
    await e.client.send_file(
          e.chat_id,
          file,
-         caption="Carbon By SnapDragon",
+         caption="Carbon by [Dawn Labs](https://dawnlabs.io)/",
          force_document=True,
          reply_to=e.message.reply_to_msg_id,
          )
