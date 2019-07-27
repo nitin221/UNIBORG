@@ -2,3 +2,4 @@ telethon>=1.9.0
 -r ./requirements-stdborg.txt
 pygithub
 lxml
+selenium
