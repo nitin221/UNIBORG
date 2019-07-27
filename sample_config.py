@@ -103,7 +103,10 @@ class Config(object):
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", None)
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", None)
     G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
-   #
+    #
+   #Google Chrome Stuff
+    CHROME_DRIVER = os.environ.get("CHROME_DRIVER", None)
+    GOOGLE_CHROME_BIN = os.environ.get("GOOGLE_CHROME_BIN", None)
     TELE_GRAM_2FA_CODE = os.environ.get("TELE_GRAM_2FA_CODE", None)
 class Production(Config):
     LOGGER = False
