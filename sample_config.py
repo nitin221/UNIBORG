@@ -104,9 +104,14 @@ class Config(object):
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", None)
     G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
     #
-   #Google Chrome Stuff
+    # rapidleech plugins
+    OPEN_LOAD_LOGIN = os.environ.get("OPEN_LOAD_LOGIN", "0")
+    OPEN_LOAD_KEY = os.environ.get("OPEN_LOAD_KEY", "0")
+   #Google Chrome sellenium Stuff
     CHROME_DRIVER = os.environ.get("CHROME_DRIVER", None)
     GOOGLE_CHROME_BIN = os.environ.get("GOOGLE_CHROME_BIN", None)
+    # FFMpeg
+    FF_MPEG_DOWN_LOAD_MEDIA_PATH = "uniborg.media.ffmpeg"
     TELE_GRAM_2FA_CODE = os.environ.get("TELE_GRAM_2FA_CODE", None)
 class Production(Config):
     LOGGER = False
