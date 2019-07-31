@@ -28,3 +28,4 @@ oauth2client
 httplib2
 cowpy
 Cowsay
+aria2p
