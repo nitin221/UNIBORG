@@ -41,7 +41,7 @@ async def _(event):
         await event.edit("{}: {} unbanned".format(event.chat_id, p))
 
 
-@borg.on(admin_cmd("kick ?(.*)"))
+@borg.on(admin_cmd("ukick ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -177,7 +177,7 @@ UserStatusLastWeek: {}
 UserStatusOffline: {}
 UserStatusOnline: {}
 UserStatusRecently: {}
-Bots: {}
+Bots🤖: {}
 None: {}""".format(p, d, y, m, w, o, q, r, b, n))
 
 
