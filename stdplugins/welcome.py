@@ -48,8 +48,8 @@ async def _(event):
             mention = "[{}](tg://user?id={})".format(a_user.first_name, a_user.id)
             
             current_message = await event.reply(
-                current_saved_welcome_message.format(mention=mentio
-                current_saved_welcome_message.format(mention=mention
+                
+                
                 current_saved_welcome_message.format(mention=mention, title=title, count=count, first=first, last=last, fullname=fullname, username=username, userid=userid),
                 file=cws.media_file_id
             )
