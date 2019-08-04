@@ -5,6 +5,7 @@ cfscrape
 cryptg
 emoji
 googletrans
+pySmartDL
 google_images_download
 gsearch
 gtts
