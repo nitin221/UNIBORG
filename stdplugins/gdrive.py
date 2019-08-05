@@ -179,4 +179,4 @@ async def _(event):
     if event.fwd_from:
         return
     folder_link = "https://drive.google.com/drive/u/2/folders/"+parent_id    
-    await event.edit("`Here is Your Gdrive Folder [link]( : `\n"+folder_link)    
+    await event.edit("`Here is Your Gdrive Folder link : `\n"+folder_link)    
