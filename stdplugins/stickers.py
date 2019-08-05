@@ -68,7 +68,6 @@ async def _(event):
 
     await event.edit("Muderring this sticker. Please Wait!")
     
-
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
         dt = now + datetime.timedelta(minutes=1)
@@ -87,7 +86,7 @@ async def _(event):
                 return
             w = await bot_conv.send_file(
                 file=uploaded_sticker,
-                allow_cache=False
+                allow_cache=False,
                 force_document=True
             )
             response = await bot_conv.get_response()
@@ -102,8 +101,7 @@ async def _(event):
             if response.text == "Sorry, this short name is already taken.":
                 await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
                 return
-            
-                else:
+        else:
             await silently_send_message(bot_conv, "/cancel")
             await silently_send_message(bot_conv, "/addsticker")
             await silently_send_message(bot_conv, packshortname)
@@ -120,12 +118,9 @@ async def _(event):
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/done")
 
-    await event.edit(f"Muderred this sticker! You can see sticker soul [here](t.me/addstickers/{packshortname})")
+    await event.edit(f"sticker added! Your pack can be found [here](t.me/addstickers/{packshortname})")
 
 
-           
-            
-        
 @borg.on(admin_cmd("packinfo"))
 async def _(event):
     if event.fwd_from:
@@ -332,3 +327,4 @@ def zipdir(path, ziph):
         for file in files:
             ziph.write(os.path.join(root, file))
             os.remove(os.path.join(root, file))
+    
