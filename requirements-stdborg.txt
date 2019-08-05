@@ -30,3 +30,4 @@ httplib2
 cowpy
 Cowsay
 aria2p
+humanize
