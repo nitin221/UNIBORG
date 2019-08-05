@@ -90,7 +90,6 @@ async def _(event):
                 allow_cache=False
                 force_document=True
             )
-            
             response = await bot_conv.get_response()
             if "Sorry" in response.text:
                 await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
@@ -103,7 +102,8 @@ async def _(event):
             if response.text == "Sorry, this short name is already taken.":
                 await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
                 return
-        else:
+            
+                else:
             await silently_send_message(bot_conv, "/cancel")
             await silently_send_message(bot_conv, "/addsticker")
             await silently_send_message(bot_conv, packshortname)
@@ -123,6 +123,9 @@ async def _(event):
     await event.edit(f"Muderred this sticker! You can see sticker soul [here](t.me/addstickers/{packshortname})")
 
 
+           
+            
+        
 @borg.on(admin_cmd("packinfo"))
 async def _(event):
     if event.fwd_from:
