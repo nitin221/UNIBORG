@@ -67,7 +67,7 @@ async def _(event):
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
     await event.edit("Muderring this sticker. Please Wait!")
-    print(uploaded_sticker)
+    
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
@@ -87,12 +87,17 @@ async def _(event):
                 return
             w = await bot_conv.send_file(
                 file=uploaded_sticker,
+                allow_cache=False
                 force_document=True
             )
-            print(w)
-            await bot_conv.get_response()
+            
+            response = await bot_conv.get_response()
+            if "Sorry" in response.text:
+                await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                return
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/publish")
+            response = await silently_send_message(bot_conv, f"<{packname}>")
             await silently_send_message(bot_conv, "/skip")
             response = await silently_send_message(bot_conv, packshortname)
             if response.text == "Sorry, this short name is already taken.":
@@ -104,9 +109,13 @@ async def _(event):
             await silently_send_message(bot_conv, packshortname)
             await bot_conv.send_file(
                 file=uploaded_sticker,
+                allow_cache=False,
                 force_document=True
             )
             response = await bot_conv.get_response()
+            if "Sorry" in response.text:
+                await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                return
             await silently_send_message(bot_conv, response)
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/done")
