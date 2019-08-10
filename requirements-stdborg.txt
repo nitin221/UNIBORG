@@ -6,7 +6,7 @@ cryptg
 emoji
 googletrans
 pySmartDL
-google_images_download
+google_images_download>=2.7.1
 gsearch
 gtts
 hachoir
