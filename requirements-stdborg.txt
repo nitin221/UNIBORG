@@ -15,6 +15,10 @@ psycopg2
 python-magic
 qrcode
 python-barcode
+cowpy
+Cowsay
+aria2p
+humanize
 regex
 requests
 speedtest-cli
@@ -28,7 +32,3 @@ git+https://github.com/ahupp/python-magic
 google-api-python-client
 oauth2client
 httplib2
-cowpy
-Cowsay
-aria2p
-humanize
