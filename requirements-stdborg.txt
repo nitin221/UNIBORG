@@ -14,6 +14,7 @@ Pillow
 psycopg2
 python-magic
 qrcode
+python-barcode
 regex
 requests
 speedtest-cli
