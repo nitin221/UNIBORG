@@ -1,38 +1,34 @@
-"""Download & Upload Images on Telegram
-Syntax: .img <Name>"""
 
+"""
+StartPage Search Plugin for Userbot . //Alternative to Google Search
+cmd : .sh search_query 
+By:Peru men  @Zero_cool7870
+"""
 
-from google_images_download import google_images_download
 import os
-import shutil
-from re import findall
+import asyncio
+import json
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd("img ?(.*)"))
-async def img_sampler(event):
-    await event.edit("Processing...")
-    query = event.pattern_match.group(1)
-    lim = findall(r"lim=\d+", query)
-    try:
-        lim = lim[0]
-        lim = lim.replace("lim=", "")
-        query = query.replace("lim=" + lim[0], "")
-    except IndexError:
-        lim = 2
-    response = google_images_download.googleimagesdownload()
 
-    # creating list of arguments
-    arguments = {
-        "keywords": query,
-        "limit": lim,
-        "format": "jpg",
-        "no_directory": "no_directory"
-    }
+@borg.on(admin_cmd(pattern="sh ?(.*)", allow_sudo=True))
+async def sp_search(event):
+	search_str = event.pattern_match.group(1)
 
-    # passing the arguments to the function
-    paths = response.download(arguments)
-    lst = paths[0][query]
-    await borg.send_file(await borg.get_input_entity(event.chat_id), lst)
-    shutil.rmtree(os.path.dirname(os.path.abspath(lst[0])))
-    await event.delete()
+	await event.edit("**Searching for "+search_str+" ...**")
+
+	command = "sp --json "+search_str+" > out.json"
+
+	os.system(command)
+
+	f = open('out.json','r').read()
+
+	data = json.loads(str(f))
+
+	msg = "**Search Query** \n`"+search_str+"`\n**Results**\n"
+
+	for element in data:
+		msg = msg + "⁍ ["+element['title']+"]("+element['link']+")\n\n"
+
+	await event.edit(msg)
