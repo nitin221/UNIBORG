@@ -4,4 +4,6 @@ lxml
 selenium
 chatterbot_corpus
 Chatterbot
+spcli 
+instaloader
 -r ./requirements-stdborg.txt
