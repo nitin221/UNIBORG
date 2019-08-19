@@ -243,7 +243,7 @@ async def _(event):
 # Helpers
 
 def is_it_animated_sticker(message):
-try:
+    try:
         if message.media and message.media.document:
             mime_type = message.media.document.mime_type
             if "tgsticker" in mime_type:
