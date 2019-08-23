@@ -11,7 +11,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern="sp ?(.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="sch ?(.*)", allow_sudo=True))
 async def sp_search(event):
 	search_str = event.pattern_match.group(1)
 
