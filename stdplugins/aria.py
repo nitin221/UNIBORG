@@ -141,7 +141,7 @@ async def resume_all(event):
     await event.edit("Output: " + str(resumed))
 
 
-@borg.on(admin_cmd(pattern="show"))
+@borg.on(admin_cmd(pattern="sow"))
 async def show_all(event):
     if event.fwd_from:
         return
