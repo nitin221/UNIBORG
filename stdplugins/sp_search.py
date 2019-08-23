@@ -1,6 +1,6 @@
 """
 StartPage Search Plugin for Userbot . //Alternative to Google Search
-cmd : .sc search_query 
+cmd : .sch search_query 
 By: @Zero_cool7870
 """
 
