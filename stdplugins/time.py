@@ -11,7 +11,7 @@ from uniborg.util import admin_cmd
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 
-@borg.on(admin_cmd("time ?(.*)"))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="time ?(.*)"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
