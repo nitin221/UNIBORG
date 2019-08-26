@@ -13,7 +13,7 @@ from uniborg.util import admin_cmd
 DEL_TIME_OUT = 70
 
 
-@borg.on(admin_cmd("autobio"))  # pylint:disable=E0602
+borg.on(admin_cmd(pattern="pbio (.*)"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
