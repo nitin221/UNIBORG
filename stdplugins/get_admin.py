@@ -5,11 +5,11 @@ from telethon.tl.types import ChannelParticipantsAdmins, ChannelParticipantAdmin
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd("get_ad?(m)in ?(.*)"))
+@borg.on(admin_cmd(pattern="get_ad?(m)in ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "**Admins in this Channel**: \n"
+    mentions = "**Admins in this Chat**: \n"
     should_mention_admins = False
     reply_message = None
     pattern_match_str = event.pattern_match.group(1)
