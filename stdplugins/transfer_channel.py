@@ -8,7 +8,7 @@ from telethon.tl import functions, types
 from uniborg import util
 
 
-@borg.on(util.admin_cmd("otransfer (.*)"))  # pylint:disable=E0602
+@borg.on(util.admin_cmd(pattern="otransfer (.*)"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -23,4 +23,4 @@ async def _(event):
     except Exception as e:
         await event.edit(str(e))
     else:
-        await event.edit("Transferred 🌚")
+        await event.edit("Transferred 🌚🙊")
