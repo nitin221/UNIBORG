@@ -7,7 +7,7 @@ from telethon import events
 from telethon.tl import functions, types
 from uniborg.util import admin_cmd
 
-borg.storage.USER_AFK = {}  # pylint:enable=E0602
+borg.storage.USER_AFK = {}  # pylint:disable=E0602
 borg.storage.afk_time = None  # pylint:disable=E0602
 borg.storage.last_afk_message = {}  # pylint:disable=E0602
 
