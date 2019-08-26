@@ -3,7 +3,7 @@ from telethon import events, functions, __version__
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="infoo ?(.*)", allow_sudo=True))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="info ?(.*)", allow_sudo=True))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -11,7 +11,7 @@ async def _(event):
     if splugin_name in borg._plugins:
         s_help_string = borg._plugins[splugin_name].__doc__
     else:
-        s_help_string = "My Fork: https://github.com/AVATARX0TIC/UniBorg"
+        s_help_string = "My Fork: https://github.com/AVATARX0TIC/AVATARUniBorg"
     help_string = """@UniBorg\n\n@refundisillegal\nVERIFIED ACCOUNT✅
 Python {}
 Telethon {}
