@@ -24,7 +24,7 @@ a new file under the plugin directory to do the job:
 from telethon import events
 from uniborg.util import admin_cmd
 
-@borg.on(admin_cmd("hi"))
+@borg.on(admin_cmd(patter="hi"))
 async def handler(event):
     await event.reply("hey")
 ```
