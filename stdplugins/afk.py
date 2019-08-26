@@ -34,7 +34,7 @@ async def set_not_afk(event):
         borg.storage.afk_time = None  # pylint:disable=E0602
 
 
-@borg.on(admin_cmd("afk ?(.*)", outgoing=True))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="afk ?(.*)", outgoing=True))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
