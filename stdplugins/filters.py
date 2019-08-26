@@ -66,7 +66,7 @@ async def on_snip(event):
                 borg.storage.last_triggered_filters[event.chat_id].remove(name)
 
 
-@borg.on(admin_cmd("savefilter (\S+) ?((.|\n)*)"))
+@borg.on(admin_cmd(pattern="savefilter (\S+) ?((.|\n)*)"))
 async def on_snip_save(event):
     name = event.pattern_match.group(1)
     meseg = event.pattern_match.group(2)
@@ -91,7 +91,7 @@ async def on_snip_save(event):
     await event.edit(f"filter {name} saved successfully. Get it with {name}")
 
 
-@borg.on(admin_cmd("listfilters"))
+@borg.on(admin_cmd(pattern="listfilters"))
 async def on_snip_list(event):
     all_snips = get_all_filters(event.chat_id)
     OUT_STR = "Available Filters in the Current Chat:\n"
@@ -116,7 +116,7 @@ async def on_snip_list(event):
         await event.edit(OUT_STR)
 
 
-@borg.on(admin_cmd("clearfilter (.*)"))
+@borg.on(admin_cmd(pattern="clearfilter (.*)"))
 async def on_snip_delete(event):
     name = event.pattern_match.group(1)
     remove_filter(event.chat_id, name)
