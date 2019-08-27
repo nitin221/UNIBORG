@@ -77,7 +77,7 @@ UNMUTE_RIGHTS = ChatBannedRights(
 # ================================================
 
 
-@borg.on(admin_cmd("sgp", outgoing=True))
+@borg.on(admin_cmd(pattern="sgp", outgoing=True))
 async def set_group_photo(gpic):
     """ For .setgrouppic command, changes the picture of a group """
     if not gpic.text[0].isalpha() and gpic.text[0] not in ("/", "#", "@", "!"):
@@ -122,7 +122,7 @@ async def set_group_photo(gpic):
 
 
 
-@borg.on(admin_cmd("ban(?: |$)(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern="ban(?: |$)(.*)", outgoing=True))
 async def ban(bon):
     """ For .ban command, do "thanos" at targeted person """
     if not bon.text[0].isalpha() and bon.text[0] not in ("/", "#", "@", "!"):
@@ -181,7 +181,7 @@ async def ban(bon):
             )
 
 
-@borg.on(admin_cmd("unban(?: |$)(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern="unban(?: |$)(.*)", outgoing=True))
 async def nothanos(unbon):
     """ For .unban command, undo "thanos" on target """
     if not unbon.text[0].isalpha() and unbon.text[0] \
@@ -225,7 +225,7 @@ async def nothanos(unbon):
             await unbon.edit("`Uh oh my unban logic broke!`")
 
 
-@borg.on(admin_cmd("mute(?: |$)(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern="mute(?: |$)(.*)", outgoing=True))
 async def spider(spdr):
     """
     This function is basically muting peeps
@@ -281,7 +281,7 @@ async def spider(spdr):
             await spdr.edit("`Uh oh my unban logic broke!`")
 
 
-@borg.on(admin_cmd("unmute(?: |$)(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern="unmute(?: |$)(.*)", outgoing=True))
 async def unmoot(unmot):
     """ For .unmute command, unmute the target """
     if not unmot.text[0].isalpha() and unmot.text[0] \
@@ -327,7 +327,7 @@ async def unmoot(unmot):
             )
 
 
-@borg.on(admin_cmd("delusers(?: |$)(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern="delusers(?: |$)(.*)", outgoing=True))
 async def rm_deletedacc(show):
     """ For .adminlist command, list all of the admins of the chat. """
     if not show.text[0].isalpha() and show.text[0] not in ("/", "#", "@", "!"):
@@ -404,7 +404,7 @@ async def rm_deletedacc(show):
         await show.edit(del_status)
 
 
-@borg.on(admin_cmd("kick(?: |$)(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern="kick(?: |$)(.*)", outgoing=True))
 async def kick(usr):
     """ For .kick command, kick someone from the group using the userbot. """
     if not usr.text[0].isalpha() and usr.text[0] not in ("/", "#", "@", "!"):
@@ -457,7 +457,7 @@ async def kick(usr):
             )
 
 
-@borg.on(admin_cmd("userslist(?: |$)(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern="userslist(?: |$)(.*)", outgoing=True))
 async def get_users(show):
     """ For .userslist command, list all of the users of the chat. """
     if not show.text[0].isalpha() and show.text[0] not in ("/", "#", "@", "!"):
