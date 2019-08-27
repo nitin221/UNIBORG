@@ -38,7 +38,7 @@ async def _(event):
         await asyncio.sleep(DEL_TIME_OUT)
 
 
-@borg.on(admin_cmd("autoname"))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
