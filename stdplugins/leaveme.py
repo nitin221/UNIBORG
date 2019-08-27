@@ -9,10 +9,10 @@ from uniborg.util import admin_cmd
 import time
 
 
-@borg.on(admin_cmd("leave", outgoing=True))
+@borg.on(admin_cmd(pattern="leave", outgoing=True))
 async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("`I iz is leaving this chat kek.....! Goodbye .. `")
+        await e.edit("`I iz leaving this chat kek.....! Goodbye .. `")
         time.sleep(3)
         if '-' in str(e.chat_id):
             await borg(LeaveChannelRequest(e.chat_id))
