@@ -48,7 +48,7 @@ async def on_snip(event):
         await event.delete()
 
 
-@borg.on(admin_cmd("snips (\S+) ?((.|\n)*)"))
+@borg.on(admin_cmd(pattern="snips (\S+) ?((.|\n)*)"))
 async def on_snip_save(event):
     name = event.pattern_match.group(1)
     meseg = event.pattern_match.group(2)
@@ -73,7 +73,7 @@ async def on_snip_save(event):
     await event.edit("snip {name} saved successfully. Get it with #{name}".format(name=name))
 
 
-@borg.on(admin_cmd("snipl"))
+@borg.on(admin_cmd(pattern="snipl"))
 async def on_snip_list(event):
     all_snips = get_all_snips()
     OUT_STR = "Available Snips:\n"
@@ -98,7 +98,7 @@ async def on_snip_list(event):
         await event.edit(OUT_STR)
 
 
-@borg.on(admin_cmd("snipd (\S+)"))
+@borg.on(admin_cmd(pattern="snipd (\S+)"))
 async def on_snip_delete(event):
     name = event.pattern_match.group(1)
     remove_snip(name)
