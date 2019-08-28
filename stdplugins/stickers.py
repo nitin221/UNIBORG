@@ -121,7 +121,7 @@ async def _(event):
     await event.edit(f"R.I.P this sticker! Sticker Soul is [here](t.me/addstickers/{packshortname})")
 
 
-@borg.on(admin_cmd("packinfo"))
+@borg.on(admin_cmd(pattern="packinfo"))
 async def _(event):
     if event.fwd_from:
         return
@@ -157,7 +157,7 @@ async def _(event):
                      f"**Emojis In Pack:** {' '.join(pack_emojis)}")
 
 
-@borg.on(admin_cmd("getsticker ?(.*)"))
+@borg.on(admin_cmd(pattern="getsticker ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
