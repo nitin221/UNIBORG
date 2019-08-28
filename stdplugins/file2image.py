@@ -7,7 +7,7 @@ from telethon.errors import PhotoInvalidDimensionsError
 from telethon.tl.functions.messages import SendMediaRequest
 
 
-@borg.on(admin_cmd(pattern="f (.*)"))
+@borg.on(util.admin_cmd(pattern=r"f (.*)"))
 async def on_file_to_photo(event):
     await event.delete()
     target = await event.get_reply_message()
