@@ -8,7 +8,7 @@ import asyncio
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern=pattern="gban (.*)"))
+@borg.on(admin_cmd(pattern="gban (.*)"))
 async def _(event):
     if event.fwd_from:
         return
