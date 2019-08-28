@@ -107,4 +107,4 @@ def search_torrentz_eu(search_query):
             except:
                 pass
     return r
-© 2019
+
