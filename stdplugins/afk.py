@@ -7,9 +7,9 @@ from telethon import events
 from telethon.tl import functions, types
 from uniborg.util import admin_cmd
 
-borg.storage.USER_AFK = {}  # pylint:disable=E0602
-borg.storage.afk_time = None  # pylint:disable=E0602
-borg.storage.last_afk_message = {}  # pylint:disable=E0602
+USER_AFK = {}  # pylint:disable=E0602
+afk_time = None  # pylint:disable=E0602
+last_afk_message = {}  # pylint:disable=E0602
 
 
 @borg.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
@@ -30,8 +30,8 @@ async def set_not_afk(event):
                 reply_to=event.message.id,
                 silent=True
             )
-        borg.storage.USER_AFK = {}  # pylint:disable=E0602
-        borg.storage.afk_time = None  # pylint:disable=E0602
+        USER_AFK = {}  # pylint:disable=E0602
+        afk_time = None  # pylint:disable=E0602
 
 
 @borg.on(admin_cmd(pattern="afk ?(.*)", outgoing=True))  # pylint:disable=E0602
@@ -39,7 +39,7 @@ async def _(event):
     if event.fwd_from:
         return
     reason = event.pattern_match.group(1)
-    if not borg.storage.USER_AFK:  # pylint:disable=E0602
+    if not USER_AFK:  # pylint:disable=E0602
         last_seen_status = await borg(  # pylint:disable=E0602
             functions.account.GetPrivacyRequest(
                 types.InputPrivacyKeyStatusTimestamp()
@@ -76,11 +76,11 @@ async def on_afk(event):
         # userbot's should not reply to other userbot's
         # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
         return False
-    if borg.storage.USER_AFK and not (await event.get_sender()).bot:  # pylint:disable=E0602
-        reason = borg.storage.USER_AFK["yes"]  # pylint:disable=E0602
-        if borg.storage.afk_time:  # pylint:disable=E0602
+    if USER_AFK and not (await event.get_sender()).bot:  # pylint:disable=E0602
+        reason = USER_AFK["yes"]  # pylint:disable=E0602
+        if fk_time:  # pylint:disable=E0602
             now = datetime.datetime.now()
-            datime_since_afk = now - borg.storage.afk_time  # pylint:disable=E0602
+            datime_since_afk = now - afk_time  # pylint:disable=E0602
             time = float(datime_since_afk.seconds)
             days = time // (24 * 3600)
             time = time % (24 * 3600)
@@ -112,6 +112,6 @@ async def on_afk(event):
             else f"`I'M AFK`"
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
-        if event.chat_id in borg.storage.last_afk_message:  # pylint:disable=E0602
-            await borg.storage.last_afk_message[event.chat_id].delete()  # pylint:disable=E0602
-        borg.storage.last_afk_message[event.chat_id] = msg  # pylint:disable=E0602
+        if event.chat_id in last_afk_message:  # pylint:disable=E0602
+            await last_afk_message[event.chat_id].delete()  # pylint:disable=E0602
+        last_afk_message[event.chat_id] = msg  # pylint:disable=E0602
