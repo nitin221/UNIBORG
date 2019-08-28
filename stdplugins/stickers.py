@@ -30,7 +30,7 @@ from telethon.tl.types import (
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd("kangsticker ?(.*)"))
+@borg.on(admin_cmd(pattern="kang ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -118,7 +118,7 @@ async def _(event):
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/done")
 
-    await event.edit(f"Mudrdered this sticker! Sticker Soul is [here](t.me/addstickers/{packshortname})")
+    await event.edit(f"R.I.P this sticker! Sticker Soul is [here](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd("packinfo"))
