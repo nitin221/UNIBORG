@@ -41,7 +41,7 @@ async def aria_start(event):
     await event.edit(OUTPUT)
 
 
-@borg.on(admin_cmd(pattern="addmag"))
+@borg.on(admin_cmd(pattern="magnet"))
 async def magnet_download(event):
     if event.fwd_from:
         return
