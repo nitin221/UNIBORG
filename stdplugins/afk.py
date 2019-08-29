@@ -47,7 +47,7 @@ async def _(event):
         )
         if isinstance(last_seen_status.rules, types.PrivacyValueAllowAll):
             borg.storage.afk_time = datetime.datetime.now()  # pylint:disable=E0602
-        borg.storage.USER_AFK.update({"yes": reason})  # pylint:disable=E0602
+        USER_AFK.update({"yes": reason})  # pylint:disable=E0602
         if reason:
             await event.edit(f"Set AFK mode to True, and Reason is {reason}")
         else:
