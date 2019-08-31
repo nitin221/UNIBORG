@@ -108,7 +108,10 @@ class Config(object):
     # rapidleech plugins
     OPEN_LOAD_LOGIN = os.environ.get("OPEN_LOAD_LOGIN", "0")
     OPEN_LOAD_KEY = os.environ.get("OPEN_LOAD_KEY", "0")
-   #Google Chrome sellenium Stuff
+    #MongoDB
+    MONGO_URI = os.environ.get("MONGO_URI", None)
+
+    #Google Chrome sellenium Stuff
     CHROME_DRIVER = os.environ.get("CHROME_DRIVER", None)
     GOOGLE_CHROME_BIN = os.environ.get("GOOGLE_CHROME_BIN", None)
     # FFMpeg
