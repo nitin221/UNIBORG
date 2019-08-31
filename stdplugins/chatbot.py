@@ -84,7 +84,7 @@ async def chat_bot(event):
 	msg = str(text.message)
 	reply = bot.get_response(msg)
 	print(reply)
-	await event.edit("**Jas's Bot:\n"+str(reply)+"**")
+	await event.edit("**AVATAR's Bot💬:\n"+str(reply)+"**")
 
 @borg.on(admin_cmd(pattern="autochat", allow_sudo=True))
 async def chat_bot(event):
