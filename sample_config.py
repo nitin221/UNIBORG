@@ -108,6 +108,8 @@ class Config(object):
     # rapidleech plugins
     OPEN_LOAD_LOGIN = os.environ.get("OPEN_LOAD_LOGIN", "0")
     OPEN_LOAD_KEY = os.environ.get("OPEN_LOAD_KEY", "0")
+    #Lydia API
+    LYDIA_API = os.environ.get("LYDIA_API",None)
     #MongoDB
     MONGO_URI = os.environ.get("MONGO_URI", None)
 
