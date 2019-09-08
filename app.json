@@ -137,6 +137,7 @@
     },
     "VERY_STREAM_LOGIN": {
       "description": "Get your API key from https://verystream.com",
+      "value": "Asia/Kolkata",
       "required": false
     },
     "VERY_STREAM_KEY": {
