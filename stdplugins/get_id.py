@@ -26,7 +26,7 @@ async def _(event):
             await event.edit("{}The BOT API file ID of this media is `{}`".format(a_msg, str(bot_api_file_id)))
         else:
             chat = await event.get_input_chat()
-            await event.edit("{}The current chat's ID is🤖 `{}` and the replied user as an ID👨: `{}`".format(a_msg, str(event.chat_id), str(r_msg.from_id)))
+            await event.edit("{}The current chat's ID is 🤖 `{}` \n\n\nand the replied user as an ID👨: `{}`".format(a_msg, str(event.chat_id), str(r_msg.from_id)))
     else:
         chat = await event.get_input_chat()
         await event.edit("{}The current chat's ID is🤖 `{}`!".format(a_msg, str(event.chat_id)))
