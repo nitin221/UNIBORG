@@ -90,7 +90,7 @@ You can log-in as Bot or User and do many cool things with your Telegram account
 All instaructions to run @UniBorg in your PC has been explained in https://github.com/SpEcHiDe/UniBorg""",
                 buttons=[
                     [custom.Button.url("Join the Channel", "https://telegram.dog/UniBorg"), custom.Button.url(
-                        "Join the Group", "tg://some_unsupported_feature")],
+                        "Join the Group", "https://telegram.dog.thanktelegram")],
                     [custom.Button.url(
                         "Source Code", "tg://some_unsupported_feature")]
                 ],
