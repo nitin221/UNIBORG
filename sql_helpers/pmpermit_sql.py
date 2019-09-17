@@ -1,3 +1,4 @@
+  
 from sqlalchemy import Column, String
 from sql_helpers import SESSION, BASE
 
@@ -41,3 +42,5 @@ def get_all_approved():
     rem = SESSION.query(PMPermit).all()
     SESSION.close()
     return rem
+
+
