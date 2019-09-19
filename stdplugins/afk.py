@@ -121,10 +121,10 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"My Master [AVATAR](t.me/iIoveuserbot) Has Been Gone For {afk_since} " + \
-            f"\n\n__I promise I'll back in a few hours__\n**REASON**: {reason}" \
+        message_to_reply = f"My Master [AVATAR](t.me/the_userbot) Is **AFK**  \n{afk_since} " + \
+            f"\n\n__I promise I'll back in a few hours__\n\n**REASON**: {reason}" \
             if reason \
-            else f"[AVATAR](t.me/iIloveuserbot) is **AFK** so wait and dont spam PM\n\n**THANKS**"
+            else f"[AVATAR](t.me/the_userbot) is **AFK** so wait and dont spam PM\n\n**THANKS**"
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
