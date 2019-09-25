@@ -217,7 +217,7 @@ async def on_new_chat_action_message(event):
 async def on_new_channel_message(event):
     if Config.PM_LOGGR_BOT_API_ID is None:
         return
-     try:
+    try:
         if tgbot is None:
             return
     except Exception as e:
