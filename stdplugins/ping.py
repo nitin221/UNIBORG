@@ -9,7 +9,7 @@ async def _(event):
         return
     await event.delete()
     start = datetime.now()
-    mone = await event.edit("Pong!")
+    mone = await event.reply("Pong!")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await mone.edit("Pong Speed!\n{}".format(ms))
