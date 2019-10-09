@@ -7,8 +7,9 @@ from uniborg.util import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
+    await event.delete()
     start = datetime.now()
-    await event.edit("Pong!")
+    mone = await event.edit("Pong!")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit("Pong Speed!\n{}".format(ms))
