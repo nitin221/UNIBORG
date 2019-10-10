@@ -22,8 +22,8 @@ FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
 @borg.on(admin_cmd(pattern="autopp ?(.*)"))
 async def autopic(event):
-    downloaded_file_name = "./DOWNLOADS/original_pic.png"
-    downloader = SmartDL(Config.AVATAR, downloaded_file_name, progress_bar=True)
+    downloaded_file_name = "./UniBorg/original_pic.png"
+    downloader = SmartDL(Config.AVATAR_XD, downloaded_file_name, progress_bar=True)
     downloader.start(blocking=False)
     photo = "photo_pfp.png"
     while not downloader.isFinished():
