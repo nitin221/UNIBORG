@@ -116,6 +116,10 @@ class Config(object):
     #Google Chrome sellenium Stuff
     CHROME_DRIVER = os.environ.get("CHROME_DRIVER", None)
     GOOGLE_CHROME_BIN = os.environ.get("GOOGLE_CHROME_BIN", None)
+    #autopp
+    AVATAR_XD = os.environ.get("AVATAR_XD", None)
+
+
     # FFMpeg
     FF_MPEG_DOWN_LOAD_MEDIA_PATH = "uniborg.media.ffmpeg"
     TELE_GRAM_2FA_CODE = os.environ.get("TELE_GRAM_2FA_CODE", None)
