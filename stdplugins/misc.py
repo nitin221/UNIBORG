@@ -9,7 +9,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest #leaving it here in the hope of some will sort it out ;)
 from uniborg.util import admin_cmd
 
- @borg.on(admin_cmd(pattern="sg ?(.*)"))
+@borg.on(admin_cmd(pattern="sg ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 
