@@ -35,7 +35,7 @@ async def _(event):
     if event.fwd_from:
         return
     if not event.is_reply:
-        await mone.edit("Reply to a photo to add to my personal sticker pack.")
+    mone = await event.reply("Reply to a photo to add to my personal sticker pack.")
         return
     reply_message = await event.get_reply_message()
     sticker_emoji = "🔥"
