@@ -272,10 +272,3 @@ async def check_media(reply_message):
 
 
 
-CMD_HELP.update({
-
-    'deepfry':
-
-    ".deepfry <number>"
-
-    "\nDeepfries an image or sticker, optional fry pass count."
