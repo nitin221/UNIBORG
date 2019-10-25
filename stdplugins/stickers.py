@@ -66,7 +66,7 @@ async def _(event):
             sticker.seek(0)
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
-    await mone.edit("Muderring this sticker. Please Wait!")
+    await event.reply("Muderring this sticker. Please Wait!")
     
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
@@ -78,11 +78,11 @@ async def _(event):
             else:
                 response = await silently_send_message(bot_conv, "/newpack")
             if "Yay!" not in response.text:
-                await mone.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                await event.reply(f"**FAILED**! @Stickers replied: {response.text}")
                 return
             response = await silently_send_message(bot_conv, packname)
             if not response.text.startswith("Alright!"):
-                await mone.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                await event.reply(f"**FAILED**! @Stickers replied: {response.text}")
                 return
             w = await bot_conv.send_file(
                 file=uploaded_sticker,
@@ -91,7 +91,7 @@ async def _(event):
             )
             response = await bot_conv.get_response()
             if "Sorry" in response.text:
-                await mone.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                await event.reply(f"**FAILED**! @Stickers replied: {response.text}")
                 return
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/publish")
@@ -99,7 +99,7 @@ async def _(event):
             await silently_send_message(bot_conv, "/skip")
             response = await silently_send_message(bot_conv, packshortname)
             if response.text == "Sorry, this short name is already taken.":
-                await mone.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                await event.reply(f"**FAILED**! @Stickers replied: {response.text}")
                 return
         else:
             await silently_send_message(bot_conv, "/cancel")
@@ -118,7 +118,7 @@ async def _(event):
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/done")
 
-    await mone.edit(f"R.I.P this sticker! Sticker Soul is [here](t.me/addstickers/{packshortname})")
+    await event.edit(f"R.I.P this sticker! Sticker Soul is [here](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd(pattern="packinfo"))
