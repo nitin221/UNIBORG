@@ -91,7 +91,7 @@ from telethon import events
 
 
 
-@borg.on(admin_cmd(pattern="deepfry(?: |$)(.*)", outgoing=True,)) 
+@borg.on(admin_cmd(pattern="deepfry(?: |$)(.*)", allow_sudo=True))
 
 async def deepfryer(event):
 
