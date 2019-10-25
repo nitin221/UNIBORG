@@ -84,8 +84,7 @@ from PIL import Image, ImageEnhance, ImageOps
 
 from telethon.tl.types import DocumentAttributeFilename
 from uniborg.util import admin_cmd
-
-
+from telethon import events
 
 
 
