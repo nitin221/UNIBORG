@@ -119,13 +119,13 @@ async def deepfryer(event):
 
         if isinstance(data, bool):
 
-            await event.edit("`I can't deep fry that!`")
+            await event.reply("`I can't deep fry that!`")
 
             return
 
     else:
 
-        await event.edit("`Reply to an image or sticker to deep fry it!`")
+        await event.reply("`Reply to an image or sticker to deep fry it!`")
 
         return
 
@@ -133,7 +133,7 @@ async def deepfryer(event):
 
     # download last photo (highres) as byte array
 
-    await event.edit("`Downloading media…`")
+    await event.reply("`Downloading media…`")
 
     image = io.BytesIO()
 
@@ -145,7 +145,7 @@ async def deepfryer(event):
 
     # fry the image
 
-    await event.edit("`Deep frying media…`")
+    await event.reply("`Deep frying media…`")
 
     for _ in range(frycount):
 
