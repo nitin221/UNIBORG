@@ -19,7 +19,7 @@ from uniborg.util import progress, humanbytes, time_formatter, admin_cmd
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 
 
-@borg.on(admin_cmd(pattern="rndlup (.*)"))
+@borg.on(admin_cmd(pattern="rndlup (.*)")), allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -95,7 +95,7 @@ async def _(event):
         await mone.edit("Incorrect URL\n {}".format(input_str))
 
 
-@borg.on(admin_cmd(pattern="rnupload (.*)"))
+@borg.on(admin_cmd(pattern="rnupload (.*)")), allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
