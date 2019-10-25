@@ -30,12 +30,12 @@ from telethon.tl.types import (
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="kang ?(.*)"))
+@borg.on(admin_cmd(pattern="kang ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
     if not event.is_reply:
-        await event.edit("Reply to a photo to add to my personal sticker pack.")
+        await event.reply("Reply to a photo to add to my personal sticker pack.")
         return
     reply_message = await event.get_reply_message()
     sticker_emoji = "🔥"
@@ -58,7 +58,7 @@ async def _(event):
         packname = f"{userid}'s AVATAR @refundisillegal"
         packshortname = f"Uni_Borg_{userid}_as"  # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
-        await event.edit("Invalid message type")
+        await event.reply("Invalid message type")
         return
     else:
         with BytesIO(file) as mem_file, BytesIO() as sticker:
@@ -66,7 +66,7 @@ async def _(event):
             sticker.seek(0)
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
-    await event.edit("Muderring this sticker. Please Wait!")
+    await event.reply("Muderring this sticker. Please Wait!")
     
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
@@ -78,7 +78,7 @@ async def _(event):
             else:
                 response = await silently_send_message(bot_conv, "/newpack")
             if "Yay!" not in response.text:
-                await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                await event.reply(f"**FAILED**! @Stickers replied: {response.text}")
                 return
             response = await silently_send_message(bot_conv, packname)
             if not response.text.startswith("Alright!"):
@@ -91,7 +91,7 @@ async def _(event):
             )
             response = await bot_conv.get_response()
             if "Sorry" in response.text:
-                await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                await event.reply(f"**FAILED**! @Stickers replied: {response.text}")
                 return
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/publish")
@@ -112,13 +112,13 @@ async def _(event):
             )
             response = await bot_conv.get_response()
             if "Sorry" in response.text:
-                await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                await event.reply(f"**FAILED**! @Stickers replied: {response.text}")
                 return
             await silently_send_message(bot_conv, response)
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/done")
 
-    await event.edit(f"R.I.P this sticker! Sticker Soul is [here](t.me/addstickers/{packshortname})")
+    await event.reply(f"R.I.P this sticker! Sticker Soul is [here](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd(pattern="packinfo"))
