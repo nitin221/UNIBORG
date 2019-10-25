@@ -10,7 +10,9 @@ By:- @Zero_cool7870
 import aria2p
 from telethon import events
 import asyncio
+from uniborg.util import admin_cmd, progress
 import os
+
 
 
 cmd = "aria2c --enable-rpc --rpc-listen-all=false --rpc-listen-port 6800  --max-connection-per-server=10 --rpc-max-request-size=1024M --seed-time=0.01 --min-split-size=10M --follow-torrent=mem --split=10 --daemon=true --allow-overwrite=true"
@@ -26,7 +28,7 @@ aria2 = aria2p.API(
 	)
 
 
-@borg.on(events.NewMessage(pattern=r"\.magnet", outgoing=True)), allow_sudo=True))
+@borg.on(admin_cmd(pattern="magnet ?(.*)", allow_sudo=True))
 async def magnet_download(event):
 	if event.fwd_from:
 		return
@@ -50,7 +52,7 @@ async def magnet_download(event):
 	
 
 
-@borg.on(events.NewMessage(pattern=r"\.tor", outgoing=True)), allow_sudo=True))
+@borg.on(admin_cmd(pattern="tor ?(.*)", allow_sudo=True))
 async def torrent_download(event):
 	if event.fwd_from:
 		return
@@ -66,7 +68,7 @@ async def torrent_download(event):
 	gid = download.gid
 	await progress_status(gid=gid,event=event,previous=None)
 
-@borg.on(events.NewMessage(pattern=r"\.url", outgoing=True)), allow_sudo=True))
+@borg.on(admin_cmd(pattern="url ?(.*)", allow_sudo=True))
 async def magnet_download(event):
 	if event.fwd_from:
 		return
@@ -86,7 +88,7 @@ async def magnet_download(event):
 		new_gid = await check_metadata(gid)
 		await progress_status(gid=new_gid,event=event,previous=None)
 
-@borg.on(events.NewMessage(pattern=r"\.ariaRM", outgoing=True)), allow_sudo=True))
+@borg.on(admin_cmd(pattern="ariaRM ?(.*)", allow_sudo=True))
 async def remove_all(event):
 	if event.fwd_from:
 		return
@@ -99,7 +101,7 @@ async def remove_all(event):
 		os.system("aria2p remove-all")
 	await event.edit("`Removed All Downloads.`")  
 
-@borg.on(events.NewMessage(pattern=r"\.show", outgoing=True)), allow_sudo=True))
+@borg.on(admin_cmd(pattern="show ?(.*)", allow_sudo=True))
 async def show_all(event):
 	if event.fwd_from:
 		return
