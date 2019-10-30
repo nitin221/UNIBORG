@@ -6,7 +6,7 @@ from uniborg.util import admin_cmd
 from telethon.errors.rpcerrorlist import (UserIdInvalidError,
                                           MessageTooLongError)
                                           
-@borg.on(events.NewMessage(pattern=r"\.userlist ?(.*)", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.userlist ?(.*)", outgoing=True)", allow_sudo=True))
 async def get_users(show):
     """ For .userslist command, list all of the users of the chat. """
     if not show.text[0].isalpha() and show.text[0] not in ("/", "#", "@", "!"):
@@ -35,7 +35,7 @@ async def get_users(show):
         try:
             await show.edit(mentions)
         except MessageTooLongError:
-            await show.edit("Damn, this is a huge group. Uploading users lists as file.")
+            await show.reply("Damn, this is a huge group. Uploading users lists as file.")
             file = open("userslist.txt", "w+")
             file.write(mentions)
             file.close()
