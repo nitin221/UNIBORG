@@ -10,13 +10,13 @@ from telethon.utils import get_input_location
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="whois ?(.*)"))
+@borg.on(admin_cmd(pattern="whois ?(.*)", allow_sudo=TRUE))
 async def _(event):
     if event.fwd_from:
         return
     replied_user, error_i_a = await get_full_user(event)
     if replied_user is None:
-        await event.edit(str(error_i_a))
+        await event.reply(str(error_i_a))
         return False
     replied_user_profile_photos = await borg(GetUserPhotosRequest(
         user_id=replied_user.user.id,
