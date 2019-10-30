@@ -5,7 +5,7 @@ from telethon.utils import pack_bot_file_id
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="get_id ?(.*)"))
+@borg.on(admin_cmd(pattern="get_id ?(.*)", allow_sudo=TRUE))
 async def _(event):
     if event.fwd_from:
         return
@@ -23,10 +23,10 @@ async def _(event):
         r_msg = await event.get_reply_message()
         if r_msg.media:
             bot_api_file_id = pack_bot_file_id(r_msg.media)
-            await event.edit("{}The BOT API file ID of this media is `{}`".format(a_msg, str(bot_api_file_id)))
+            await event.reply("{}The BOT API file ID of this media is `{}`".format(a_msg, str(bot_api_file_id)))
         else:
             chat = await event.get_input_chat()
-            await event.edit("{}The current chat's ID is 🤖 `{}` \n\n\nand the replied user as an ID👨: `{}`".format(a_msg, str(event.chat_id), str(r_msg.from_id)))
+            await event.reply("{}The current chat's ID is 🤖 `{}` \n\n\nand the replied user as an ID👨: `{}`".format(a_msg, str(event.chat_id), str(r_msg.from_id)))
     else:
         chat = await event.get_input_chat()
-        await event.edit("{}The current chat's ID is🤖 `{}`!".format(a_msg, str(event.chat_id)))
+        await event.reply("{}The current chat's ID is🤖 `{}`!".format(a_msg, str(event.chat_id)))
