@@ -13,7 +13,7 @@ import io
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="eval (.*)"))
+@borg.on(admin_cmd(pattern="eval (.*)", allow_sudo=TRUE))
 async def _(event):
     if event.fwd_from:
         return
@@ -64,7 +64,7 @@ async def _(event):
             )
             await event.delete()
     else:
-        await event.edit(final_output)
+        await event.reply(final_output)
 
 
 async def aexec(code, event):
