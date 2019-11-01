@@ -51,6 +51,6 @@ async def _(event):
         nurl = f"https://del.dog/v/{r['key']}"
         await event.edit("Dogged to {} in {} seconds. GoTo Original URL: {}".format(url, ms, nurl))
     else:
-        await event.reply("Pasted Your Text[HERE]({}) in {} seconds".format(url, ms))
+        await event.reply("Pasted Your Text [HERE]({}) in {} seconds".format(url, ms))
 
                           
