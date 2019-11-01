@@ -24,8 +24,7 @@ import importlib.util
 
 
 
-
-@borg.on(events.NewMessage(outgoing=True, pattern='^\.(f?f)leave '))
+@borg.on(admin_cmd(pattern="leave ?(.*)", sudo_allow=True))
 
 async def timer_blankx(e):
 
@@ -45,5 +44,5 @@ async def timer_blankx(e):
 
  if e.pattern_match.group(1) == 'f':
 
-  await e.edit("`Group Exited. I Had A Pleasant Stay With You Guys..` ")
+  await e.edit("`Group Exited. I Had A Pleasant Stay With You Guys #ktnxbye..` ")
 
