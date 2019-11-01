@@ -9,7 +9,7 @@ from uniborg.util import admin_cmd
 import time
 
 
-@borg.on(admin_cmd(pattern="leaveme", outgoing=True)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="leaveme ?(.*)", allow_sudo=True)) 
 async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.reply("`I iz leaving this chat kek.....! Goodbye .. `")
