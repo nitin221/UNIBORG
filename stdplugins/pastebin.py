@@ -12,7 +12,7 @@ def progress(current, total):
     logger.info("Downloaded {} of {}\nCompleted {}".format(current, total, (current / total) * 100))
 
 
-@borg.on(admin_cmd(pattern="paste ?(.*)"))
+@borg.on(admin_cmd(pattern="paste ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -51,4 +51,6 @@ async def _(event):
         nurl = f"https://del.dog/v/{r['key']}"
         await event.edit("Dogged to {} in {} seconds. GoTo Original URL: {}".format(url, ms, nurl))
     else:
-        await event.edit("'Pasted Your Text'    [HERE]({}) in {} seconds".format(url, ms))
+        await event.reply("Pasted Your Text[HERE]({}) in {} seconds".format(url, ms))
+
+                          
