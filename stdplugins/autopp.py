@@ -20,7 +20,7 @@ import shutil
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
-@borg.on(admin_cmd(pattern="autopp ?(.*)", sudo_allow=True))
+@borg.on(admin_cmd(pattern="autopp ?(.*)", allow_sudo=True))
 async def autopic(event):
     downloaded_file_name = "./UniBorg/original_pic.png"
     downloader = SmartDL(Config.AVATAR_XD, downloaded_file_name, progress_bar=True)
