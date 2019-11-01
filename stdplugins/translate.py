@@ -8,7 +8,7 @@ from googletrans import Translator
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="tr ?(.*)"))
+@borg.on(admin_cmd(pattern="tr ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -36,6 +36,6 @@ async def _(event):
             lan,
             after_tr_text
         )
-        await event.edit(output_str)
+        await event.reply(output_str)
     except Exception as exc:
         await event.edit(str(exc))
