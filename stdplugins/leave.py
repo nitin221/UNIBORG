@@ -24,7 +24,7 @@ import importlib.util
 
 
 
-@borg.on(admin_cmd(pattern="leave ?(.*)", sudo_allow=True))
+@borg.on(admin_cmd(pattern="leave ?(.*)", allow_sudo=True))
 
 async def timer_blankx(e):
 
