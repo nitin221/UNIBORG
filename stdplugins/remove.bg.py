@@ -14,7 +14,7 @@
 #
 """Remove.BG Plugin for @UniBorg
 Syntax: .remove.bg https://link.to/image.extension
-Syntax: .remove.bg as reply to a media"""
+Syntax: .rbg as reply to a media"""
 import asyncio
 from datetime import datetime
 import io
@@ -24,9 +24,9 @@ from telethon import events
 from uniborg.util import progress, admin_cmd
 
 
-@borg.on(admin_cmd(pattern="remove\.bg ?(.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="rbg ?(.*)", allow_sudo=True))
 async def _(event):
-    HELP_STR = "`.remove.bg` as reply to a media, or give a link as an argument to this command"
+    HELP_STR = "`.rbg` as reply to a media, or give a link as an argument to this command"
     if event.fwd_from:
         return
     if Config.REM_BG_API_KEY is None:
