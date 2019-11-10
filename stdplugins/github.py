@@ -5,7 +5,7 @@ import requests
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="github (.*)"))
+@borg.on(admin_cmd(pattern="git (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -39,4 +39,4 @@ Profile Created: {}""".format(name, html_url, gh_type, company, blog, location, 
         )
         await event.delete()
     else:
-        await event.edit("`{}`: {}".format(input_str, r.text))
+        await event.reply("`{}`: {}".format(input_str, r.text))
