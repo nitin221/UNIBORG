@@ -133,7 +133,7 @@ async def deepfryer(event):
 
     # download last photo (highres) as byte array
 
-    await event.reply("`Downloading media…`")
+    await event.edit("`Downloading media…`")
 
     image = io.BytesIO()
 
