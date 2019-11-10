@@ -8,7 +8,7 @@ import urbandict
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="ud (.*)"))
+@borg.on(admin_cmd(pattern="ud (.*)" allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -17,7 +17,7 @@ async def _(event):
     try:
         mean = urbandict.define(str)
         if len(mean) > 0:
-            await event.edit(
+            await event.reply(
                 'Text: **' +
                 str +
                 '**\n\nMeaning: **' +
