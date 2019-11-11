@@ -3,6 +3,7 @@ Syntax: .github USERNAME"""
 from telethon import events
 import requests
 from uniborg.util import admin_cmd
+from telegram import ParseMode
 
 
 @borg.on(admin_cmd(pattern="git (.*)", allow_sudo=True))
@@ -40,3 +41,14 @@ Profile Created: {}""".format(name, html_url, gh_type, company, blog, location, 
         await event.delete()
     else:
         await event.reply("`{}`: {}".format(input_str, r.text))
+
+   
+@borg.on(admin_cmd(pattern="repo (.*)", allow_sudo=True))
+async def _(event):
+    message = update.effective_message
+    text = message.text[len('/repo '):]
+    url = get(f'https://api.github.com/users/{text}/repos?per_page=40').json()
+    reply_text = "*Repo*\n"
+    for i in range(len(usr)):
+        reply_text += f"[{usr[i]['name']}]({usr[i]['html_url']})\n"
+    message.reply_text(reply_text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
