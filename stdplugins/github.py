@@ -3,7 +3,7 @@ Syntax: .github USERNAME"""
 from telethon import events
 import requests
 from uniborg.util import admin_cmd
-from telegram import ParseMode
+import ParseMode
 
 
 @borg.on(admin_cmd(pattern="git (.*)", allow_sudo=True))
