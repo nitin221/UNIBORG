@@ -43,14 +43,3 @@ Profile Created: {}""".format(name, html_url, gh_type, company, blog, location, 
         await event.reply("`{}`: {}".format(input_str, r.text))
 
    
-@borg.on(admin_cmd(pattern="repo (.*)", allow_sudo=True))
-async def _(event):
-    if event.fwd_from:
-        return
-    input_str = event.pattern_match.group(1)
-    await = event.edit[len('repo '):]
-    url = get(f'https://api.github.com/users/{text}/repos?per_page=40').json()
-    await = event.edit["*Repo*\n"]
-    for i in range(len(usr)):
-        reply_text += f"[{usr[i]['name']}]({usr[i]['html_url']})\n"
-    await = event.edit(reply_text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
