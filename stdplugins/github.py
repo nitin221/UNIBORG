@@ -48,9 +48,9 @@ async def _(event):
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
-    text = message.text[len('repo '):]
+    await = event.edit[len('repo '):]
     url = get(f'https://api.github.com/users/{text}/repos?per_page=40').json()
-    reply_text = "*Repo*\n"
+    await = event.edit["*Repo*\n"]
     for i in range(len(usr)):
         reply_text += f"[{usr[i]['name']}]({usr[i]['html_url']})\n"
-    message.reply_text(reply_text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+    await = event.edit(reply_text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
