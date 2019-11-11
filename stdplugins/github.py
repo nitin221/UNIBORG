@@ -45,10 +45,10 @@ Profile Created: {}""".format(name, html_url, gh_type, company, blog, location, 
    
 @borg.on(admin_cmd(pattern="repo (.*)", allow_sudo=True))
 async def _(event):
-      if event.fwd_from:
+    if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
-    text = message.text[len('/repo '):]
+    text = message.text[len('repo '):]
     url = get(f'https://api.github.com/users/{text}/repos?per_page=40').json()
     reply_text = "*Repo*\n"
     for i in range(len(usr)):
