@@ -1,4 +1,4 @@
-"""Get Telegram nformation
+"""Get Telegram User Information
 Syntax: .wh @username/userid"""
 
 
