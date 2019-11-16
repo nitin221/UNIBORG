@@ -4,17 +4,17 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
 
-from uniborg.utils import admin_cmd
+from uniborg.util import admin_cmd
 
 TMP_DOWNLOAD_DIRECTORY = "./"
 
 
 @register(pattern="^.wh(?: |$)(.*)", outgoing=True)
 async def who(event):
-    """ For .wh command, get info about a user. """
     if event.fwd_from:
         return
 
+    
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TMP_DOWNLOAD_DIRECTORY)
 
