@@ -112,7 +112,7 @@ async def fetch_info(replied_user, event):
 
     return caption
 
-admin_cmd.wh2({
+admin_cmd.syntax{
     "wh2": ".wh2 <username> or reply to someones text with .whois\
     \nUsage: Gets info of an user."
 })
