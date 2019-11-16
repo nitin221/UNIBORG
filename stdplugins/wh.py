@@ -1,5 +1,10 @@
-import os
+"""Get Telegram nformation
+Syntax: .wh @username/userid"""
 
+
+
+
+import os
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
@@ -92,7 +97,7 @@ async def fetch_info(replied_user, event):
         
     
     caption = "<b>General Info OF:</b> \n"
-    caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>"
+    caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>"\n
     caption += f"<b>First Name</b>: {first_name} \n"
     caption += f"Last Name</b>: {last_name} \n"
     caption += f"<b>ID</b>: <code>{user_id}</code> \n \n"
