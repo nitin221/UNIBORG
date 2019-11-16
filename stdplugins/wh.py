@@ -79,7 +79,7 @@ async def fetch_info(replied_user, event):
                              offset=42,
                              max_id=0,
                              limit=80))
-    replied_user_profile_photos_count = "Person needs help with uploading profile picture."
+    replied_user_profile_photos_count = "NaN."
     try:
         replied_user_profile_photos_count = replied_user_profile_photos.count
     except AttributeError as e:
@@ -90,7 +90,7 @@ async def fetch_info(replied_user, event):
     try:
         dc_id, location = get_input_location(replied_user.profile_photo)
     except Exception as e:
-        dc_id = "Couldn't fetch DC ID!"
+        dc_id = "Need a Profile Picture to check DC ID!"
         location = str(e)
     common_chat = replied_user.common_chats_count
     username = replied_user.user.username
