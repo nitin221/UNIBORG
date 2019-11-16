@@ -92,7 +92,7 @@ async def fetch_info(replied_user, event):
         
     
     
-    caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>" \n"
+    caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>\n"
     caption = "<b>General Info:</b> \n"
     caption += f"<b>First Name</b>: {first_name} \n"
     caption += f"Last Name</b>: {last_name} \n"
