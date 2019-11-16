@@ -91,19 +91,21 @@ async def fetch_info(replied_user, event):
         common_chat += "They're in all the same places I am... oh. It's me."
         
     
-    
-    caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>\n"
-    caption = "<b>General Info:</b> \n"
+    caption = "<b>General Info OF:</b> \n"
+    caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>"
     caption += f"<b>First Name</b>: {first_name} \n"
     caption += f"Last Name</b>: {last_name} \n"
+    caption += f"<b>ID</b>: <code>{user_id}</code> \n \n"
     caption += f"<b>Username</b>: {username} \n"
     caption += f"<b>Bot</b>: {is_bot} \n"
     caption += f"Restricted: {restricted} \n"
     caption += f"Verified: {verified} \n"
-    caption += f"<b>ID</b>: <code>{user_id}</code> \n \n"
     caption += f"<b>Bio</>: \n<code>{user_bio}</code> \n \n"
     caption += f"Common Chats: {common_chat} \n"
     caption += f"Permanent Link: "
     caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>"
 
     return caption
+
+    
+    
