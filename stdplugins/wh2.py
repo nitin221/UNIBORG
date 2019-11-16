@@ -12,8 +12,8 @@ async def who(event):
         if event.fwd_from:
             return
 
-        if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
-            os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
+        if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
+            os.makedirs(TMP_DOWNLOAD_DIRECTORY)
 
         replied_user = await get_user(event)
 
