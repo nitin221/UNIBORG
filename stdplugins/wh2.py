@@ -5,7 +5,7 @@ from telethon.tl.types import MessageEntityMentionName
 
 from uniborg.util import admin_cmd
 
-@Borg.on(admin_cmd(pattern="wh2 (.*)"))
+@borg.on(admin_cmd(pattern="wh2 (.*)"))
 async def who(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         """ For .wh2 command, get info about a user. """
