@@ -112,7 +112,5 @@ async def fetch_info(replied_user, event):
 
     return caption
 
-CMD_HELP.update{
-    "wh2": ".wh2 <username> or reply to someones text with .whois\
-    \nUsage: Gets info of an user."
-})
+
+
