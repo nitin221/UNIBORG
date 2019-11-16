@@ -101,7 +101,7 @@ async def fetch_info(replied_user, event):
     caption += f"First Name: {first_name} \n"
     caption += f"Last Name: {last_name} \n"
     caption += f"Username: {username} \n"
-    
+
     caption += f"Is Restricted: {restricted} \n"
     caption += f"Is Verified by Telegram: {verified} \n"
     caption += f"ID: <code>{user_id}</code> \n \n"
@@ -110,7 +110,7 @@ async def fetch_info(replied_user, event):
     caption += f"Permanent Link: "
     caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>"
 
-    return , caption
+    return caption
 
 admin_cmd.wh2({
     "wh2": ".wh2 <username> or reply to someones text with .whois\
