@@ -98,8 +98,6 @@ async def fetch_info(replied_user, event):
     
     caption = "<b>General Info OF:</b> \n"
     caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a> \n"
-    
-    
     caption += f"<b>First Name</b>: {first_name} \n"
     caption += f"Last Name</b>: {last_name} \n"
     caption += f"<b>ID</b>: <code>{user_id}</code> \n \n"
@@ -109,10 +107,13 @@ async def fetch_info(replied_user, event):
     caption += f"Verified: {verified} \n"
     caption += f"<b>Bio</>: \n<code>{user_bio}</code> \n \n"
     caption += f"Common Chats: {common_chat} \n"
-    caption += f"Permanent Link: "
-    caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>"
+    
+    
 
     return caption
+
+    
+    
 
     
     
