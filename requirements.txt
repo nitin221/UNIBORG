@@ -3,7 +3,7 @@ aria2p
 lxml
 selenium
 chatterbot_corpus
-
+pyrogram
 spcli 
 instaloader
 coffeehouse==1.0.4
