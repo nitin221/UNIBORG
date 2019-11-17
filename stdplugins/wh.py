@@ -108,8 +108,8 @@ async def fetch_info(replied_user, event):
     last_name = last_name.replace(
         "\u2060", "") if last_name else ("")
     username = "@{}".format(username) if username else (
-        "This User has no Username")
-    user_bio = "This User has no About" if not user_bio else user_bio
+        "NaN")
+    user_bio = "NaN" if not user_bio else user_bio
     if user_id != (await event.client.get_me()).id:
         common_chat = replied_user.common_chats_count
     else:
