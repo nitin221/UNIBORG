@@ -124,8 +124,8 @@ async def fetch_info(replied_user, event):
     caption += f"<b>Username</b>: {username} \n"
     caption += f"DC ID: {dc_id}\n"
     caption += f"Number of PPs: {replied_user_profile_photos_count}\n"
-    caption += f"Common Groups: {common_chat} \n"
-    
+    caption += f"Common Groups: {common_chat} \n \n"
+    caption += f"<b>Bio</b>: \n<code>{user_bio}</code>
 
     return caption
     
