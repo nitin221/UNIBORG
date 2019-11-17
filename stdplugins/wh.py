@@ -5,6 +5,7 @@ Syntax: .wh @username/userid"""
 
 
 import os
+import html
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.utils import get_input_location
 
