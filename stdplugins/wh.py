@@ -27,7 +27,7 @@ async def _(event):
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TMP_DOWNLOAD_DIRECTORY)
 
-    replied_user, error_i_a = await get_user(event)
+    replied_user, await get_user(event)
 
     caption = await fetch_info(replied_user, event)
 
