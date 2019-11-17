@@ -18,7 +18,7 @@ TMP_DOWNLOAD_DIRECTORY = "./"
 
 
 @borg.on(admin_cmd(pattern="wh (.*)"))
-async def who(event):
+async def _(event):
     if event.fwd_from:
         return
 
@@ -26,7 +26,7 @@ async def who(event):
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TMP_DOWNLOAD_DIRECTORY)
 
-    replied_user = await get_user(event)
+    replied_user, error_i_a = await get_full_user(event)
 
     caption = await fetch_info(replied_user, event)
 
