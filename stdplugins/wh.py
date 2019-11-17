@@ -6,7 +6,7 @@ Syntax: .wh @username/userid"""
 
 import os
 import html
-from pyrogram import ParseMode
+
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.utils import get_input_location
 
@@ -38,7 +38,7 @@ async def _(event):
     if not message_id_to_reply:
         message_id_to_reply = None
 
-    await event.edit(caption, ParseMode="HTML")
+    await event.edit(caption, parse_mode="HTML")
 
 
 async def get_user(event):
