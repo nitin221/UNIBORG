@@ -38,7 +38,7 @@ async def _(event):
     if not message_id_to_reply:
         message_id_to_reply = None
 
-    await event.edit(caption, ParseMode="HTML")
+    await event.edit(caption, ParseMode.HTML
 
 
 async def get_user(event):
