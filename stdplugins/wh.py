@@ -7,7 +7,7 @@ Syntax: .wh @username/userid"""
 import os
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.utils import get_input_location
-from telethon.tl.functions.users import GetFullUserRequest
+
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
@@ -27,7 +27,7 @@ async def _(event):
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TMP_DOWNLOAD_DIRECTORY)
 
-    replied_user, error_i_a = await get_full_user(event)
+    replied_user, error_i_a = await get_user(event)
 
     caption = await fetch_info(replied_user, event)
 
