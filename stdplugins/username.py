@@ -20,5 +20,5 @@ async def update_username(username):
         ))
         await event.edit("Succesfully changed my Username")
     except UsernameOccupiedError:
-        await event.edit(This Username is Already Reserved)
+        await event.edit("This Username is Already Reserved")
 
