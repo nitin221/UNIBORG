@@ -15,7 +15,7 @@ USERNAME_DENIED = "```This Username Already Reserved.```"
 @borg.on(admin_cmd(pattern="usr"))
 async def update_username(username):
 
-    newusername = username.pattern_match.group(1)
+    newusername = event.pattern_match.group(1)
     try:
         await borg(UpdateUsernameRequest(newusername))
         await username.edit(USERNAME_UPDATED)
