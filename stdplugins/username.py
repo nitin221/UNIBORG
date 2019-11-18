@@ -10,7 +10,7 @@ from telethon.tl import functions
 
 
 
-@borg.on(admin_cmd(pattern='^usr (.*)'
+@borg.on(admin_cmd(pattern="usr ?(.*)"))
 async def update_username(username):
 
     newusername = username.pattern_match.group(1)
