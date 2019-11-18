@@ -22,7 +22,7 @@ async def update_username(username):
 
     newusername = username.pattern_match.group(1)
     try:
-        await borg(UpdateUsernameRequest(@newusername))
+        await borg(UpdateUsernameRequest(newusername))
         
         await username.edit("Succesfully changed my Username")
     except UsernameOccupiedError:
