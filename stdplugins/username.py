@@ -1,4 +1,4 @@
-"""Plugin To Change Username by @Refundisillegal
+"""Plugin To Change Username by @Refundisillegal and the Help of @SpEcHiDe
 Available Commands:
 .usr <Username>"""
 
