@@ -1,3 +1,10 @@
+"""Plugin To Change Username by @Refundisillegal
+Available Commands:
+.usr <Username>(without @)"""
+
+
+
+
 import os
 from telethon import events
 from uniborg.util import admin_cmd
