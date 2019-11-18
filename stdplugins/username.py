@@ -17,7 +17,7 @@ async def update_username(username):
     try:
         await borg(functions.account.UpdateUsernameRequest(  # pylint:disable=E0602
             about=username
-        
+        ))
         await event.edit(Username Succesfully Changed)
     except UsernameOccupiedError:
         await event.edit(This Username is Already Reserved)
