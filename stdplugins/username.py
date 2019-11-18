@@ -13,7 +13,7 @@ from telethon.tl import functions
 @borg.on(admin_cmd(pattern="usr"))
 async def update_username(username):
 
-    newusername = event.pattern_match.group(1)
+    newusername = username.pattern_match.group(1)
     try:
         await borg(functions.account.UpdateUsernameRequest(  # pylint:disable=E0602
             about=username
