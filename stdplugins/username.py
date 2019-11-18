@@ -1,8 +1,10 @@
 import os
 from telethon import events
 from uniborg.util import admin_cmd
+
 from telethon.tl import functions
-from telethon.tl.functions.account UpdateUsernameRequest
+from telethon.tl.functions.account import UpdateUsernameRequest
+from telethon.errors.rpcerrorlist import UsernameOccupiedError
 
 
 USERNAME_UPDATED = "```Username Successfully Updated.```"
