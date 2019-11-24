@@ -8,6 +8,8 @@ from telethon import events
 import telethon.utils
 
 from uniborg import util
+from uniborg.util import admin_cmd
+
 
 
 async def get_target_message(event):
