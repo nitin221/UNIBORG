@@ -84,10 +84,10 @@ async def who(event):
         message_id_to_reply = None
 
     try:
-        await event.edit(caption)
+        await event.reply(caption)
 
     except:
-        await event.edit("`Can't slap this nibba !!`")
+        await event.reply("`Can't slap this nibba !!`")
 
 async def get_user(event):
     if event.reply_to_msg_id:
