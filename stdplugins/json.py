@@ -5,7 +5,7 @@ import io
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="json"))
+@borg.on(admin_cmd(pattern="json ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -30,4 +30,4 @@ async def _(event):
             )
             await event.delete()
     else:
-        await event.edit("`{}`".format(the_real_message))
+        await event.reply("`{}`".format(the_real_message))
