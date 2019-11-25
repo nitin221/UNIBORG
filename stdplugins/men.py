@@ -1,5 +1,5 @@
 """Mention/Tag Replied Users\n
-`.mention` <text>
+`.men` <text>
 """
 # By: @INF1N17Y
 
@@ -18,4 +18,4 @@ async def _(event):
         await event.delete()
         await borg.send_message(event.chat_id, caption, parse_mode="HTML")
     else:
-        await event.edit("Reply to user with `.mention <your text>`")
+        await event.edit("Reply to user with `.men <your text>`")
