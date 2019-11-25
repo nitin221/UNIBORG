@@ -9,7 +9,7 @@ from uniborg.util import admin_cmd
 import random
 
 
-@borg.on(events.NewMessage(pattern=r"\.shout", outgoing=True))
+@borg.on(admin_cmd(pattern="shout ?(.*)", allow_sudo=True))
 async def shout(args):
     if args.fwd_from:
         return
@@ -26,7 +26,7 @@ async def shout(args):
         result[0] = text[0]
         result = "".join(result)
         msg = "\n" + result
-        await args.edit("`"+msg+"`")
+        await args.reply("`"+msg+"`")
         
     
     
