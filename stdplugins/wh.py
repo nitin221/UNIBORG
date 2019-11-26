@@ -24,12 +24,7 @@ TMP_DOWNLOAD_DIRECTORY = "./"
 async def _(event):
     if event.fwd_from:
         return
-    if not event.reply_to_msg_id:
-       await event.edit("```Reply to any user message.```")
-       return
-    reply_message = await event.get_reply_message()
 
-    
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TMP_DOWNLOAD_DIRECTORY)
 
