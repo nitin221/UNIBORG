@@ -17,7 +17,7 @@ def progress(current, total):
     logger.info("Downloaded {} of {}\nCompleted {}".format(current, total, (current / total) * 100))
 
 
-@borg.on(admin_cmd(pattern="google search (.*)"))
+@borg.on(admin_cmd(pattern="google search ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -39,10 +39,10 @@ async def _(event):
     ms = (end - start).seconds
     await event.edit("searched Google for {} in {} seconds. \n{}".format(input_str, ms, output_str), link_preview=False)
     await asyncio.sleep(5)
-    await event.edit("Google: {}\n{}".format(input_str, output_str), link_preview=False)
+    await event.reply("Google: {}\n{}".format(input_str, output_str), link_preview=False)
 
 
-@borg.on(admin_cmd(pattern="google image (.*)"))
+@borg.on(admin_cmd(pattern="google image ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -130,4 +130,4 @@ async def _(event):
         OUTPUT_STR = """{img_size}
 **Possible Related Search**: <a href="{prs_url}">{prs_text}</a>
 More Info: Open this <a href="{the_location}">Link</a> in {ms} seconds""".format(**locals())
-    await event.edit(OUTPUT_STR, parse_mode="HTML", link_preview=False)
+    await event.reply(OUTPUT_STR, parse_mode="HTML", link_preview=False)
