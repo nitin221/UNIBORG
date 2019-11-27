@@ -141,7 +141,7 @@ async def ban(bon):
     if reason:
         await bon.edit(f"Alright! [{user.first_name}](tg://user?id={user.id}) has been banned !!\n**Reason:-** `{reason}`")
     else:
-        await bon.edit(f"It’s good to ban ppl actually.\nWell done [{user.first_name}](tg://user?id={user.id})😹 u got banned😂😅.")
+        await bon.edit(f"It’s good to ban ppl actually.\nWell done [{user.first_name}](tg://user?id={user.id}) 😹 u got banned😂😅.")
     # Announce to the logging group if we have banned the person
     # successfully!
     if Config.PRIVATE_GROUP_BOT_API_ID is not None:
@@ -543,8 +543,8 @@ async def rm_deletedacc(show):
 
     if con != "clean":
         await show.edit("`Searching for zombie accounts...`")
-        async for user in show.client.iter_participants(show.chat_id,
-                                                        aggressive=True):
+        async for user in show.client.iter_participants(show.chat_id):
+                                                        
             if user.deleted:
                 del_u += 1
                 await sleep(1)
