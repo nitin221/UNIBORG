@@ -547,7 +547,7 @@ async def rm_deletedacc(show):
                                                         
             if user.deleted:
                 del_u += 1
-                await sleep(1)
+                await sleep(3)
         if del_u > 0:
             del_status = f"Found **{del_u}** deleted account(s) in this group,\
             \nclean them by using .delusers clean"
