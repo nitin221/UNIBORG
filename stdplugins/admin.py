@@ -531,26 +531,25 @@ async def pin(msg):
                 f"**Loud:-** {not is_silent}")
 
 
-@borg.on(admin_cmd(pattern="delusers(?: |$)(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern="delusers (.*)"))
 async def rm_deletedacc(show):
     """ For .delusers command, list all the ghost/deleted accounts in a chat. """
     if not show.is_group:
         await show.edit("`I don't think this is a group.`")
         return
-    con = show.pattern_match.group(1)
+    con = show.pattern_match.group(1).lower()
     del_u = 0
     del_status = "`No deleted accounts found, Group is cleaned as Hell`"
 
     if con != "clean":
         await show.edit("`Searching for zombie accounts...`")
         async for user in show.client.iter_participants(show.chat_id):
-                                                        
             if user.deleted:
                 del_u += 1
-                await sleep(3)
+                await sleep(1)
         if del_u > 0:
             del_status = f"Found **{del_u}** deleted account(s) in this group,\
-            \nclean them by using .delusers clean"
+            \nclean them by using `.delusers clean`"
 
         await show.edit(del_status)
         return
