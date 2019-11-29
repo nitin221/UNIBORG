@@ -1,5 +1,5 @@
 """ It does not do to dwell on dreams and forget to live
-Syntax: .getime"""
+Syntax: .time"""
 
 import asyncio
 import os
@@ -11,7 +11,7 @@ from uniborg.util import admin_cmd
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 
-@borg.on(admin_cmd(pattern="gettime (.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="time (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
