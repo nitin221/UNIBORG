@@ -4,7 +4,7 @@ from telethon import events
 from bs4 import BeautifulSoup
 from uniborg.util import admin_cmd
 
-borg.on(admin_cmd(pattern="yt (.*)"))
+borg.on(admin_cmd(pattern="yt_video (.*)"))
 async def search_yt(event):
     url_base = "https://www.youtube.com/results"
     url_yt = "https://www.youtube.com"
