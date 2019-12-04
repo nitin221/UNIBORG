@@ -1,10 +1,11 @@
 
 import aiohttp
+from telethon import events
 from bs4 import BeautifulSoup
 from uniborg.util import admin_cmd
 
 borg.on(admin_cmd(pattern="yt (.*)"))
-async def search_yt(query):
+async def search_yt(event):
     url_base = "https://www.youtube.com/results"
     url_yt = "https://www.youtube.com"
     async with aiohttp.ClientSession() as session:
