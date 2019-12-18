@@ -36,7 +36,7 @@ async def await_read(chat, message):
     await fut
 
 
-@borg.on(admin_cmd(pattern="del ?(.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="rm ?(.*)", allow_sudo=True))
 @borg.on(util.admin_cmd(pattern="(edit)(?:\s+(.*))?$"))
 async def delete(event):
     await event.delete()
