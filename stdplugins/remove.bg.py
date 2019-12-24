@@ -30,7 +30,7 @@ async def _(event):
     if event.fwd_from:
         return
     if Config.REM_BG_API_KEY is None:
-        await event.reply("You need API token from remove.bg to use this plugin.")
+    mone = await event.reply("You need API token from remove.bg to use this plugin.")
         return False
     input_str = event.pattern_match.group(1)
     start = datetime.now()
@@ -39,7 +39,7 @@ async def _(event):
         message_id = event.reply_to_msg_id
         reply_message = await event.get_reply_message()
         # check if media message
-        await event.reply("Downloading this media ...")
+        await mone.edit("Downloading this media ...")
         try:
             downloaded_file_name = await borg.download_media(
                 reply_message,
@@ -49,14 +49,14 @@ async def _(event):
             await event.reply(str(e))
             return
         else:
-            await event.reply("sending to ReMove.BG")
+            await mone.edit("sending to ReMove.BG")
             output_file_name = ReTrieveFile(downloaded_file_name)
             os.remove(downloaded_file_name)
     elif input_str:
-        await event.reply("sending to ReMove.BG")
+        await mone.edit("sending to ReMove.BG")
         output_file_name = ReTrieveURL(input_str)
     else:
-        await event.reply(HELP_STR)
+        await mone.edit(HELP_STR)
         return
     contentType = output_file_name.headers.get("content-type")
     if "image" in contentType:
@@ -72,9 +72,9 @@ async def _(event):
             )
         end = datetime.now()
         ms = (end - start).seconds
-        await event.reply("Background Removed in {} seconds using ReMove.BG API, powered by @UniBorg".format(ms))
+        await mone.edit("Background Removed in {} seconds using ReMove.BG API, powered by @UniBorg".format(ms))
     else:
-        await event.reply("ReMove.BG API returned Errors. Please report to @UniBorg\n`{}".format(output_file_name.content.decode("UTF-8")))
+        await mone.edit("ReMove.BG API returned Errors. Please report to @UniBorg\n`{}".format(output_file_name.content.decode("UTF-8")))
 
 
 # this method will call the API, and return in the appropriate format
