@@ -39,7 +39,7 @@ async def _(event):
         message_id = event.reply_to_msg_id
         reply_message = await event.get_reply_message()
         # check if media message
-           await mone.edit("Downloading this media ...")
+        await mone.edit("Downloading this media ...")
         try:
             downloaded_file_name = await borg.download_media(
                 reply_message,
@@ -47,16 +47,16 @@ async def _(event):
             )
         except Exception as e:
            await event.reply(str(e))
-            return
+           return
         else:
            await mone.edit("sending to ReMove.BG")
-            output_file_name = ReTrieveFile(downloaded_file_name)
-            os.remove(downloaded_file_name)
+           output_file_name = ReTrieveFile(downloaded_file_name)
+           os.remove(downloaded_file_name)
     elif input_str:
-          await mone.edit("sending to ReMove.BG")
+        await mone.edit("sending to ReMove.BG")
         output_file_name = ReTrieveURL(input_str)
     else:
-         await mone.edit(HELP_STR)
+        await mone.edit(HELP_STR)
         return
     contentType = output_file_name.headers.get("content-type")
     if "image" in contentType:
